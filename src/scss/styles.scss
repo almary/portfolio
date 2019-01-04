@@ -16,23 +16,23 @@
   font-style: normal;
 }
 
-// @keyframes dash {
-//   to {
-//     stroke-dashoffset: 6000;
-//   }
-// }
+@keyframes dash {
+  to {
+    stroke-dashoffset: 6000;
+  }
+}
 
-// @keyframes dashBearHead {
-//   to {
-//     stroke-dashoffset: 830;
-//   }
-// }
+@keyframes dashBearHead {
+  to {
+    stroke-dashoffset: 830;
+  }
+}
 
-// @keyframes dashBearMouth {
-//   to {
-//     stroke-dashoffset: 360;
-//   }
-// }
+@keyframes dashBearMouth {
+  to {
+    stroke-dashoffset: 360;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -115,7 +115,7 @@ align-items: center;        //repet dplsay flex
   stroke-miterlimit: 10;
   stroke-dasharray: 6000;
   stroke-dashoffset: 0;
-  animation: dash 2s linear forwards;
+  animation: dash 2s linear infinite;
 }
 
 .bear--mouth, .bear--head {
@@ -128,12 +128,12 @@ align-items: center;        //repet dplsay flex
 }
 
 .bear--head {
-  animation: dashBearHead 2s linear forwards;
+  animation: dashBearHead 2s linear infinite
 }
 
 .bear--mouth {
   stroke-dasharray: 360;
-  animation: dashBearMouth 2s linear forwards;
+  animation: dashBearMouth 2s linear infinite;
 }
 
 .project__title {
