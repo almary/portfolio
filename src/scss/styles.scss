@@ -182,7 +182,7 @@ align-items: center;        //repet dplsay flex
   width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: center; //repet 
+  justify-content: center; //repet
   margin-top: 10px;
   //  border: red 2px solid;
 }
@@ -201,6 +201,7 @@ align-items: center;        //repet dplsay flex
 
 .project__count--slash {
   color:#3c6dbf; ///repet
+  position: absolute;
 }
 
 .project--moschino .project__count--slash {
