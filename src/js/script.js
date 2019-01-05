@@ -7,6 +7,7 @@ var mover = document.getElementById("mover");
 var wikipediaSvg = document.getElementById("wikipediaSvg");
 var bearMouth = document.getElementById("bear--mouth");
 var bearHead = document.getElementById("bear--head");
+var titleBackground = document.querySelectorAll(".project__title--background");
 
 addListener();
 function addListener() {
@@ -67,14 +68,20 @@ function back() {
 
 function leave() {
   removeListener();
+
   if (index === 0) {
     wikipediaSvg.classList.remove("enter");
     wikipediaSvg.classList.add("leave");
+    titleBackground[index].classList.add("leave");
+
     setTimeout(function() {
       bearMouth.classList.remove("leave");
       bearHead.classList.remove("leave");
       bearMouth.classList.add("enter");
       bearHead.classList.add("enter");
+
+      titleBackground[index + 1].classList.remove("leave");
+
     }, 2000);
   }
   if (index === 1) {
@@ -82,10 +89,13 @@ function leave() {
     bearHead.classList.remove("enter");
     bearMouth.classList.add("leave");
     bearHead.classList.add("leave");
+    titleBackground[index].classList.add("leave");
 
     setTimeout(function() {
       wikipediaSvg.classList.remove("leave");
       wikipediaSvg.classList.add("enter");
+      titleBackground[index - 1].classList.remove("leave");
+
     }, 2000);
   }
 }
