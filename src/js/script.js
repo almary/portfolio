@@ -10,7 +10,7 @@ var bearHead = document.getElementById("bear--head");
 
 addListener();
 function addListener() {
-  console.log('add');
+  console.log("add");
   for (let i = 0; i < arrowRight.length; i++) {
     arrowRight[i].addEventListener("click", next);
   }
@@ -41,26 +41,30 @@ function next() {
       mover.style.transform = "translateY(" + translateMover + "vh)";
       index = 0;
     }
-    addListener();
+    setTimeout(function() {
+      addListener();
+    }, 2000);
   }, 2000);
-  enter();
 }
 
 function back() {
   leave();
   setTimeout(function() {
-  if (index > 0) {
-    translateMover = translateMover + 100;
-    mover.style.transform = "translateY(" + translateMover + "vh)";
-    index--;
-  } else {
-    translateMover = (totalSlides - 1) * -100;
-    mover.style.transform = "translateY(" + translateMover + "vh)";
-    index = 1;
-  }
-  addListener();
-}, 2000);
-enter();
+    if (index > 0) {
+      translateMover = translateMover + 100;
+      mover.style.transform = "translateY(" + translateMover + "vh)";
+      index--;
+    } else {
+      translateMover = (totalSlides - 1) * -100;
+      mover.style.transform = "translateY(" + translateMover + "vh)";
+      index = 1;
+    }
+    setTimeout(function() {
+      addListener();
+      enter();                  //pourquoi le enter ne se décale pas
+    }, 2000);
+  }, 2000);
+  enter();
 }
 
 function leave() {
@@ -78,7 +82,6 @@ function leave() {
 }
 
 function enter() {
-  removeListener();
   if (index === 0) {
     bearMouth.classList.remove("leave");
     bearHead.classList.remove("leave");
