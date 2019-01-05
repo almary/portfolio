@@ -8,6 +8,7 @@ var wikipediaSvg = document.getElementById("wikipediaSvg");
 var bearMouth = document.getElementById("bear--mouth");
 var bearHead = document.getElementById("bear--head");
 var titleBackground = document.querySelectorAll(".project__title--background");
+var detailsContent = document.querySelectorAll(".details--content");
 
 addListener();
 function addListener() {
@@ -72,7 +73,12 @@ function leave() {
   if (index === 0) {
     wikipediaSvg.classList.remove("enter");
     wikipediaSvg.classList.add("leave");
+
     titleBackground[index].classList.add("leave");
+
+    detailsContent[index].classList.add("leave");
+    detailsContent[index + 1].classList.add("leave"); //si mal codé
+    detailsContent[index + 2].classList.add("leave");
 
     setTimeout(function() {
       bearMouth.classList.remove("leave");
@@ -82,6 +88,9 @@ function leave() {
 
       titleBackground[index + 1].classList.remove("leave");
 
+      detailsContent[index + 3].classList.remove("leave");
+      detailsContent[index + 4].classList.remove("leave"); //si mal codé
+      detailsContent[index + 5].classList.remove("leave");
     }, 2000);
   }
   if (index === 1) {
@@ -91,11 +100,19 @@ function leave() {
     bearHead.classList.add("leave");
     titleBackground[index].classList.add("leave");
 
+    detailsContent[index + 2].classList.add("leave");
+    detailsContent[index + 3].classList.add("leave"); //si mal codé
+    detailsContent[index + 4].classList.add("leave");
+
     setTimeout(function() {
       wikipediaSvg.classList.remove("leave");
       wikipediaSvg.classList.add("enter");
+
       titleBackground[index - 1].classList.remove("leave");
 
+      detailsContent[0].classList.remove("leave");
+      detailsContent[1].classList.remove("leave"); //si mal codé
+      detailsContent[2].classList.remove("leave");
     }, 2000);
   }
 }

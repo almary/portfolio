@@ -210,9 +210,18 @@ align-items: center;        //repet dplsay flex
   padding-bottom: 3px;
 }
 
+.wrapper--content {
+  overflow: hidden;
+}
+
 .details--content {
   font-size: 14px;
   color: #3c6dbf;
+  transition: transform 1s ease-in-out;
+}
+
+.details--content.leave {
+  transform: translateY(30px);
 }
 
 .project--moschino .details--content {
