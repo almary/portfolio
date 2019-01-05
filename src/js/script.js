@@ -70,7 +70,7 @@ function back() {
 function leave() {
   removeListener();
   if (index === 0) {
-    wikipediaSvg.classList.remove("enter");
+    // wikipediaSvg.classList.remove("enter");
     wikipediaSvg.classList.add("leave");
   }
   if (index === 1) {
