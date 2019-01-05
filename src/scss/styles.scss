@@ -108,14 +108,17 @@ align-items: center;        //repet dplsay flex
   width: 220px;
 }
 
-.wikipediaSvg {
+.wikipediaSvg{
   fill: none;
   stroke: #000000;
   stroke-width: 5;
   stroke-miterlimit: 10;
   stroke-dasharray: 6000;
   stroke-dashoffset: 0;
-  animation: dash 2s linear infinite;
+}
+
+.wikipediaSvg.leave {
+  animation: dash 2s linear forwards;
 }
 
 .bear--mouth, .bear--head {
@@ -127,13 +130,13 @@ align-items: center;        //repet dplsay flex
   stroke-dashoffset: 0;
 }
 
-.bear--head {
-  animation: dashBearHead 2s linear infinite
+.bear--head.leave {
+  animation: dashBearHead 2s linear forwards;
 }
 
-.bear--mouth {
+.bear--mouth.leave {
   stroke-dasharray: 360;
-  animation: dashBearMouth 2s linear infinite;
+  animation: dashBearMouth 2s linear forwards;
 }
 
 .project__title {
