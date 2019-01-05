@@ -22,6 +22,12 @@
   }
 }
 
+@keyframes dashEnter {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @keyframes dashBearHead {
   to {
     stroke-dashoffset: 830;
@@ -31,6 +37,18 @@
 @keyframes dashBearMouth {
   to {
     stroke-dashoffset: 360;
+  }
+}
+
+@keyframes dashBearHeadEnter {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dashBearMouthEnter {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
@@ -121,6 +139,11 @@ align-items: center;        //repet dplsay flex
   animation: dash 2s linear forwards;
 }
 
+.wikipediaSvg.enter {
+  stroke-dashoffset: 6000;
+  animation: dashEnter 2s linear forwards;
+}
+
 .bear--mouth, .bear--head {
   fill: none;
   stroke: #000000;
@@ -137,6 +160,15 @@ align-items: center;        //repet dplsay flex
 .bear--mouth.leave {
   stroke-dasharray: 360;
   animation: dashBearMouth 2s linear forwards;
+}
+
+.bear--head.enter {
+  animation: dashBearHeadEnter 2s linear forwards;
+}
+
+.bear--mouth.enter {
+  stroke-dasharray: 800;
+  animation: dashBearMouthEnter 2s linear forwards;
 }
 
 .project__title {

@@ -43,6 +43,7 @@ function next() {
     }
     addListener();
   }, 2000);
+  enter();
 }
 
 function back() {
@@ -64,10 +65,27 @@ function back() {
 function leave() {
   removeListener();
   if (index === 0) {
+    wikipediaSvg.classList.remove("enter");
     wikipediaSvg.classList.add("leave");
   }
   if (index === 1) {
+    bearMouth.classList.remove("enter");
+    bearHead.classList.remove("enter");
     bearMouth.classList.add("leave");
     bearHead.classList.add("leave");
+  }
+}
+
+function enter() {
+  removeListener();
+  if (index === 0) {
+    bearMouth.classList.remove("leave");
+    bearHead.classList.remove("leave");
+    bearMouth.classList.add("enter");
+    bearHead.classList.add("enter");
+  }
+  if (index === 1) {
+    wikipediaSvg.classList.remove("leave");
+    wikipediaSvg.classList.add("enter");
   }
 }
