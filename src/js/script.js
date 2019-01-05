@@ -61,35 +61,31 @@ function back() {
     }
     setTimeout(function() {
       addListener();
-      enter();                  //pourquoi le enter ne se décale pas
     }, 2000);
   }, 2000);
-  enter();
 }
 
 function leave() {
   removeListener();
   if (index === 0) {
-    // wikipediaSvg.classList.remove("enter");
+    wikipediaSvg.classList.remove("enter");
     wikipediaSvg.classList.add("leave");
+    setTimeout(function() {
+      bearMouth.classList.remove("leave");
+      bearHead.classList.remove("leave");
+      bearMouth.classList.add("enter");
+      bearHead.classList.add("enter");
+    }, 2000);
   }
   if (index === 1) {
     bearMouth.classList.remove("enter");
     bearHead.classList.remove("enter");
     bearMouth.classList.add("leave");
     bearHead.classList.add("leave");
-  }
-}
 
-function enter() {
-  if (index === 0) {
-    bearMouth.classList.remove("leave");
-    bearHead.classList.remove("leave");
-    bearMouth.classList.add("enter");
-    bearHead.classList.add("enter");
-  }
-  if (index === 1) {
-    wikipediaSvg.classList.remove("leave");
-    wikipediaSvg.classList.add("enter");
+    setTimeout(function() {
+      wikipediaSvg.classList.remove("leave");
+      wikipediaSvg.classList.add("enter");
+    }, 2000);
   }
 }

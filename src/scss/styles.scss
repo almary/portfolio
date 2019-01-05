@@ -163,11 +163,12 @@ align-items: center;        //repet dplsay flex
 }
 
 .bear--head.enter {
+  stroke-dashoffset: 800;
   animation: dashBearHeadEnter 2s linear forwards;
 }
 
 .bear--mouth.enter {
-  stroke-dasharray: 800;
+  stroke-dashoffset: 900;
   animation: dashBearMouthEnter 2s linear forwards;
 }
 
