@@ -60,6 +60,7 @@ function back() {
   }
   addListener();
 }, 2000);
+enter();
 }
 
 function leave() {
