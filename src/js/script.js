@@ -9,6 +9,7 @@ var bearMouth = document.getElementById("bear--mouth");
 var bearHead = document.getElementById("bear--head");
 var titleBackground = document.querySelectorAll(".project__title--background");
 var detailsContent = document.querySelectorAll(".details--content");
+var countNumber = document.querySelectorAll(".project__count--number");
 
 addListener();
 function addListener() {
@@ -80,6 +81,8 @@ function leave() {
     detailsContent[index + 1].classList.add("leave"); //si mal codé
     detailsContent[index + 2].classList.add("leave");
 
+    countNumber[index].classList.add("leave");
+
     setTimeout(function() {
       bearMouth.classList.remove("leave");
       bearHead.classList.remove("leave");
@@ -91,18 +94,24 @@ function leave() {
       detailsContent[index + 3].classList.remove("leave");
       detailsContent[index + 4].classList.remove("leave"); //si mal codé
       detailsContent[index + 5].classList.remove("leave");
+
+      countNumber[index + 1].classList.remove("leave");
     }, 2000);
   }
+
   if (index === 1) {
     bearMouth.classList.remove("enter");
     bearHead.classList.remove("enter");
     bearMouth.classList.add("leave");
     bearHead.classList.add("leave");
+
     titleBackground[index].classList.add("leave");
 
     detailsContent[index + 2].classList.add("leave");
     detailsContent[index + 3].classList.add("leave"); //si mal codé
     detailsContent[index + 4].classList.add("leave");
+
+    countNumber[index].classList.add("leave");
 
     setTimeout(function() {
       wikipediaSvg.classList.remove("leave");
@@ -113,6 +122,8 @@ function leave() {
       detailsContent[0].classList.remove("leave");
       detailsContent[1].classList.remove("leave"); //si mal codé
       detailsContent[2].classList.remove("leave");
+
+      countNumber[index - 1].classList.remove("leave");
     }, 2000);
   }
 }
