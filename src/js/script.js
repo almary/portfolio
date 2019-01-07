@@ -72,8 +72,8 @@ function leave() {
   removeListener();
 
   if (index === 0) {
-    // wikipediaSvg.classList.remove("enter");
-    // wikipediaSvg.classList.add("leave");
+    wikipediaSvg.classList.remove("enter");
+    wikipediaSvg.classList.add("leave");
 
     titleBackground[index].classList.add("leave");
 
