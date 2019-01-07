@@ -4,7 +4,7 @@ var translateMover = 0;
 var arrowRight = document.querySelectorAll(".project__arrow--right");
 var arrowLeft = document.querySelectorAll(".project__arrow--left");
 var mover = document.getElementById("mover");
-// var wikipediaSvg = document.getElementById("wikipediaSvg");
+var wikipediaSvg = document.getElementById("wikipediaSvg");
 var bearMouth = document.getElementById("bear--mouth");
 var bearHead = document.getElementById("bear--head");
 var titleBackground = document.querySelectorAll(".project__title--background");
@@ -72,9 +72,8 @@ function leave() {
   removeListener();
 
   if (index === 0) {
-    var wikipediaSvg = document.getElementById("wikipediaSvg");
-    wikipediaSvg.classList.remove("enter");
-    wikipediaSvg.classList.add("leave");
+    // wikipediaSvg.classList.remove("enter");
+    // wikipediaSvg.classList.add("leave");
 
     titleBackground[index].classList.add("leave");
 
