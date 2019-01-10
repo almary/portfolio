@@ -17,22 +17,40 @@
   text-align: center;
 }
 
-
 .wikipedia__description {
-  font-family: 'Lato', sans-serif;
+  font-family: "Neue Haas Grotesk", sans-serif;
   font-size: 12px;
-  font-weight: 100;
-  margin: 15px 20px 0 20px;
+  margin: 20px 20px 0 20px;
   line-height: 1.3em;
+  color: rgb(87, 87, 87);
 }
 
 .wikipedia__illustration {
-  margin: 30px 20px 0 20px;
-  width: auto;
-  height: 500px;
-  background: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 15px;
 }
 
+.wikipedia__illustration--one, .wikipedia__illustration--two, .wikipedia__illustration--three {
+  width: 90vw;
+}
+
+.wikipedia__illustration--four {
+  width: 98vw;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  height: 100px;
+  border: black 1.5px solid;
+  text-align: center;
+}
 
 // @keyframes slide {
 //   to {
