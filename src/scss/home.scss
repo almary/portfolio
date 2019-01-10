@@ -68,6 +68,7 @@ a {
 
 .header {
   position: fixed;
+  z-index: 1;
   padding-top: 10px;
   width: 100vw;
   // border: red 2px solid;
@@ -98,7 +99,7 @@ a {
 }
 
 .home__project {
-  // transform: translateY(-100vh);
+ overflow: hidden;
 }
 
 .project {
@@ -179,14 +180,34 @@ align-items: center;        //repet dplsay flex
   text-align: center;
   font-size: 35px;
     color: white;
+    height: 40px;
 }
 
 .project__title--background {
+  position: relative;
   background-size: 100% 200%;
   background-image: linear-gradient(to bottom, #3c6dbf 50%, white 50%);
   width: 260px;
   transition: background-position 1s ease-in-out;
 }
+
+.project__title--name {
+  position: absolute;
+}
+
+// animation click
+
+// .project--wikipedia .project__title--background {
+//   transform: translateY(-58vh); // -450px
+//   width: 100vw;
+//   height: 200px;
+// }
+
+// .project--wikipedia .project__title--name {
+//   top: 65px;
+// }
+
+//
 
 .project__title--background.leave {
   background-position: 0 -100%;
