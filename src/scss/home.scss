@@ -92,7 +92,7 @@ a {
 }
 
 .header--logo {
-  // border: purple 2px solid;
+  border: purple 2px solid;
   font-size: 30px;
   margin-left: 5vw;
 }
@@ -133,13 +133,16 @@ a {
 
 .project__logo {
   width: 250px;
-  height: 200px;
   padding-bottom: 30px;
 }
 
 .project--moschino .project__logo {
   width: 220px;
 }
+
+// .project--nespresso .project__logo {
+//   // height: auto;
+// }
 
 .wikipediaSvg {
   fill: none;
@@ -199,16 +202,16 @@ a {
 }
 
 .project__title--background {
-  position: relative;
+  // position: relative;
   background-size: 100% 200%;
   background-image: linear-gradient(to bottom, #3c6dbf 50%, white 50%);
   width: 260px;
   transition: background-position 1s ease-in-out;
 }
 
-.project__title--name {
-  position: absolute;
-}
+// .project__title--name {
+//   position: absolute;
+// }
 
 // animation click
 
@@ -230,6 +233,10 @@ a {
 
 .project--moschino .project__title--background {
   background-image: linear-gradient(to bottom, #ab7723 50%, white 50%);
+}
+
+.project--nespresso .project__title--background {
+  background-image: linear-gradient(to bottom, black 50%, white 50%);
 }
 
 .project__details {
@@ -265,6 +272,10 @@ a {
   color: #ab7723;
 }
 
+.project--nespresso .details--content {
+  color: black;
+}
+
 .wrapper {
   position: relative;
   width: 100vw;
@@ -295,6 +306,10 @@ a {
 
 .project--moschino .project__count--slash {
   color: #ab7723;
+}
+
+.project--nespresso .project__count--slash {
+  color: black;
 }
 
 .project__count--number {
@@ -332,6 +347,10 @@ a {
   fill: #ab7723;
 }
 
+.project--moschino .arrow0 {
+  fill: black;
+}
+
 .arrow1 {
   fill: none;
   stroke: #3c6dbf;
@@ -340,4 +359,17 @@ a {
 
 .project--moschino .arrow1 {
   stroke: #ab7723;
+}
+
+.project--nespresso .arrow1 {
+  stroke: black;
+}
+
+.nespressoSvg {
+  fill: #ffffff;
+  stroke: #000000;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+  // stroke-dasharray: 830;
+  // stroke-dashoffset: 0;
 }

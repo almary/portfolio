@@ -1,5 +1,5 @@
 var index = 0;
-var totalSlides = 2;
+var totalSlides = 3;
 var translateMover = 0;
 var arrowRight = document.querySelectorAll(".project__arrow--right");
 var arrowLeft = document.querySelectorAll(".project__arrow--left");
@@ -7,6 +7,7 @@ var mover = document.getElementById("mover");
 var wikipediaSvg = document.getElementById("wikipediaSvg");
 var bearMouth = document.getElementById("bear--mouth");
 var bearHead = document.getElementById("bear--head");
+var wikipediaSvg = document.getElementById("nespressoSvg");
 var titleBackground = document.querySelectorAll(".project__title--background");
 var detailsContent = document.querySelectorAll(".details--content");
 var countNumber = document.querySelectorAll(".project__count--number");
