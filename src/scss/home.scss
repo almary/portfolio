@@ -133,6 +133,7 @@ a {
 
 .project__logo {
   width: 250px;
+  height: 210px;
   padding-bottom: 30px;
 }
 
@@ -140,9 +141,9 @@ a {
   width: 220px;
 }
 
-// .project--nespresso .project__logo {
-//   // height: auto;
-// }
+.project--nespresso .project__logo {
+  width: 240px;
+}
 
 .wikipediaSvg {
   fill: none;

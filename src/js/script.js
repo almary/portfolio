@@ -7,7 +7,7 @@ var mover = document.getElementById("mover");
 var wikipediaSvg = document.getElementById("wikipediaSvg");
 var bearMouth = document.getElementById("bear--mouth");
 var bearHead = document.getElementById("bear--head");
-var wikipediaSvg = document.getElementById("nespressoSvg");
+var nespressoSvg = document.getElementById("nespressoSvg");
 var titleBackground = document.querySelectorAll(".project__title--background");
 var detailsContent = document.querySelectorAll(".details--content");
 var countNumber = document.querySelectorAll(".project__count--number");
@@ -126,5 +126,8 @@ function leave() {
 
       countNumber[index - 1].classList.remove("leave");
     }, 2000);
+  }
+
+  if (index === 2) {
   }
 }
