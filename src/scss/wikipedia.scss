@@ -34,22 +34,13 @@
   margin-top: 15px;
 }
 
-.wikipedia__illustration--one, .wikipedia__illustration--two, .wikipedia__illustration--three {
+.wikipedia__illustration--one, .wikipedia__illustration--two, .wikipedia__illustration--three, .wikipedia__illustration--four {
   width: 90vw;
-}
-
-.wikipedia__illustration--container {
-  width: 90vw;            //repet
-  overflow: hidden;
-  height: 165px;
-
-}
-
-.wikipedia__illustration--four {
-  width: 95vw;
+  border: #3c6dbf 2px solid;
 }
 
 .footer {
+  margin: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
