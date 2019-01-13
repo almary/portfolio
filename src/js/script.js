@@ -58,8 +58,8 @@ function next() {
     }
     setTimeout(function() {
       addListener();
-    }, 2000);
-  }, 2000);
+    }, 1000);
+  }, 1000);
 }
 
 function back() {
@@ -76,8 +76,8 @@ function back() {
     }
     setTimeout(function() {
       addListener();
-    }, 2000);
-  }, 2000);
+    }, 1000);
+  }, 1000);
 }
 
 function leave() {
@@ -108,7 +108,7 @@ function leave() {
       detailsContent[index + 5].classList.remove("leave");
 
       countNumber[index + 1].classList.remove("leave");
-    }, 2000);
+    }, 1000);
   }
 
   if (index === 1) {
@@ -136,7 +136,7 @@ function leave() {
       detailsContent[2].classList.remove("leave");
 
       countNumber[index - 1].classList.remove("leave");
-    }, 2000);
+    }, 1000);
   }
 
   if (index === 2) {

@@ -124,7 +124,6 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 35px;
   transition: height 1s;   //transform du height ici, pas opti ?
 }
@@ -140,6 +139,8 @@ a {
   justify-content: center;
   align-items: center;
   margin: 10px;
+  color: white;
+
 }
 
 .menu__wikipedia--background {
@@ -204,12 +205,12 @@ a {
 }
 
 .wikipediaSvg.leave {
-  animation: dash 2s linear forwards;
+  animation: dash 1s linear forwards;
 }
 
 .wikipediaSvg.enter {
   stroke-dashoffset: 6000;
-  animation: dashEnter 2s linear forwards;
+  animation: dashEnter 1s linear forwards;
 }
 
 .bear--mouth,
@@ -223,22 +224,22 @@ a {
 }
 
 .bear--head.leave {
-  animation: dashBearHead 2s linear forwards;
+  animation: dashBearHead 1s linear forwards;
 }
 
 .bear--mouth.leave {
   stroke-dasharray: 360;
-  animation: dashBearMouth 2s linear forwards;
+  animation: dashBearMouth 1s linear forwards;
 }
 
 .bear--head.enter {
   stroke-dashoffset: 800;
-  animation: dashBearHeadEnter 2s linear forwards;
+  animation: dashBearHeadEnter 1s linear forwards;
 }
 
 .bear--mouth.enter {
   stroke-dashoffset: 900;
-  animation: dashBearMouthEnter 2s linear forwards;
+  animation: dashBearMouthEnter 1s linear forwards;
 }
 
 .project__title {
