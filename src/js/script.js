@@ -1,3 +1,6 @@
+var menu = document.getElementById("headerMenu");
+var works = document.getElementById("headerWorks");
+
 var index = 0;
 var totalSlides = 3;
 var translateMover = 0;
@@ -11,6 +14,14 @@ var nespressoSvg = document.getElementById("nespressoSvg");
 var titleBackground = document.querySelectorAll(".project__title--background");
 var detailsContent = document.querySelectorAll(".details--content");
 var countNumber = document.querySelectorAll(".project__count--number");
+
+// Menu
+
+works.addEventListener("click", function() {
+  menu.classList.toggle("isClicked");
+});
+
+//
 
 addListener();
 function addListener() {

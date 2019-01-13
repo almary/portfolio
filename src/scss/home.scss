@@ -107,6 +107,53 @@ a {
   margin-right: 5vw;
 }
 
+// .menu__title {
+//   color: black;
+//   transform: translateY(-20vh);
+// }
+
+.header--menu {
+  z-index: -1;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  height: 0vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+  transition: height 1s;   //transform du height ici, pas opti ?
+}
+
+.header--menu.isClicked {
+ height: 100vh;
+}
+
+.menu__wikipedia--background, .menu__moschino--background, .menu__nespresso--background {
+  width: 230px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.menu__wikipedia--background {
+  background: #3c6dbf;
+}
+
+.menu__moschino--background {
+  background: #ab7723;
+}
+
+.menu__nespresso--background {
+  background: #000000;
+}
+
 .home {
   width: 100vw;
   height: 100vh;
