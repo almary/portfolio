@@ -24,14 +24,33 @@ works.addEventListener("click", function() {
 
 //
 
+// Slider
+
 addListener();
 function addListener() {
   console.log("add");
+
+  // Arrows
   for (let i = 0; i < arrowRight.length; i++) {
     arrowRight[i].addEventListener("click", next);
   }
   for (let i = 0; i < arrowRight.length; i++) {
     arrowLeft[i].addEventListener("click", back);
+  }
+
+  //Scroll
+  window.addEventListener("wheel", wheelDetection);
+}
+
+function wheelDetection(event) {
+  var y = event.deltaY;
+  if (event.deltaY > 50) {
+    console.log("scroll down");
+    next();
+  }
+  if (event.deltaY < -50) {
+    console.log("scroll up");
+    back();
   }
 }
 
@@ -43,6 +62,9 @@ function removeListener() {
   for (let i = 0; i < arrowRight.length; i++) {
     arrowLeft[i].removeEventListener("click", back);
   }
+
+  // Scroll
+  window.removeEventListener("wheel", wheelDetection);
 }
 
 function next() {
