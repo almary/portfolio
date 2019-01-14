@@ -1,0 +1,51 @@
+.title {
+  position: relative;
+}
+
+.title__background {
+  width: 100vw;
+  height: 120px;
+  background: #ab7723;
+}
+
+.title__moschino {
+  position: absolute;
+  color: white;
+  font-size: 35px;
+  bottom: 15px;
+  width: 100vw; // repet
+  text-align: center;
+}
+
+.moschino__description {
+  font-family: "Neue Haas Grotesk", sans-serif;
+  font-size: 12px;
+  margin: 20px 20px 0 20px;
+  line-height: 1.3em;
+  color: rgb(87, 87, 87);
+}
+
+.moschino__illustration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 15px;
+}
+
+.moschino__illustration--one, .moschino__illustration--two, .moschino__illustration--three, .moschino__illustration--four {
+  width: 90vw;
+  border: #ab7723 2px solid;
+}
+
+.footer {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  height: 100px;
+  border: black 1.5px solid;
+  text-align: center;
+}

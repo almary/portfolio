@@ -2,6 +2,7 @@ var menu = document.getElementById("headerMenu");
 var works = document.getElementById("headerWorks");
 
 var index = 0;
+var speed = 1000;
 var totalSlides = 3;
 var translateMover = 0;
 var arrowRight = document.querySelectorAll(".project__arrow--right");
@@ -58,8 +59,8 @@ function next() {
     }
     setTimeout(function() {
       addListener();
-    }, 1000);
-  }, 1000);
+    }, speed);
+  }, speed);
 }
 
 function back() {
@@ -76,8 +77,8 @@ function back() {
     }
     setTimeout(function() {
       addListener();
-    }, 1000);
-  }, 1000);
+    }, speed);
+  }, speed);
 }
 
 function leave() {
@@ -108,7 +109,7 @@ function leave() {
       detailsContent[index + 5].classList.remove("leave");
 
       countNumber[index + 1].classList.remove("leave");
-    }, 1000);
+    }, speed);
   }
 
   if (index === 1) {
@@ -136,7 +137,7 @@ function leave() {
       detailsContent[2].classList.remove("leave");
 
       countNumber[index - 1].classList.remove("leave");
-    }, 1000);
+    }, speed);
   }
 
   if (index === 2) {

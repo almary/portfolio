@@ -93,7 +93,6 @@ a {
 }
 
 .header--logo {
-  border: purple 2px solid;
   font-size: 30px;
   margin-left: 5vw;
 }
@@ -109,7 +108,7 @@ a {
 
 // .menu__title {
 //   color: black;
-//   transform: translateY(-20vh);
+//   transform: translateY(-10vh);
 // }
 
 .header--menu {
@@ -244,12 +243,26 @@ a {
 
 .project__title {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; //repetition display flex
   text-align: center;
   font-size: 35px;
   color: white;
-  height: 40px;
+}
+
+.project__cta {
+  color: #3c6dbf;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.project--moschino .project__cta {
+  color: #ab7723;
+}
+
+.project--nespresso .project__cta {
+  color: black;
 }
 
 .project__title--background {
