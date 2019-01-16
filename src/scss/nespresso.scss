@@ -1,3 +1,22 @@
+.header--nespresso .header--logoSvg {
+  display: block;
+  height: 20px;
+  width: auto;
+  fill: #ffffff;
+}
+
+.header--nespresso.isScrolled .header--logoSvg {
+  fill: black;
+}
+
+.header--nespresso .header--works, .header--nespresso .header--about {
+  color: white;
+}
+
+.header--nespresso.isScrolled .header--works, .header--nespresso.isScrolled .header--about {
+  color: black;
+}
+
 .title__background--nespresso {
   background: black;
 }
