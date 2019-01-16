@@ -97,7 +97,7 @@ a {
 .header {
   position: fixed;
   z-index: 1;
-  padding-top: 20px;
+  padding-top: 10px;
   width: 100vw;
   // border: red 2px solid;
   display: flex;
@@ -254,6 +254,7 @@ a {
 }
 
 .nespressoSvg {
+  fill: none;
   stroke: #000000;
   stroke-width: 3;
   stroke-miterlimit: 10;

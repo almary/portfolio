@@ -1,7 +1,27 @@
+.header--moschino .header--logoSvg {
+  display: block;
+  height: 20px;
+  width: auto;
+  fill: #ffffff;
+}
+
+.header--moschino.isScrolled .header--logoSvg {
+  fill: black;
+}
+
+.header--moschino .header--works,
+.header--moschino .header--about {
+  color: white;
+}
+
+.header--moschino.isScrolled .header--works,
+.header--moschino.isScrolled .header--about {
+  color: black;
+}
+
 .title__background--moschino {
   background: #ab7723;
 }
-
 
 .title__moschino {
   position: absolute;
@@ -29,7 +49,10 @@
   margin-top: 15px;
 }
 
-.moschino__illustration--one, .moschino__illustration--two, .moschino__illustration--three, .moschino__illustration--four {
+.moschino__illustration--one,
+.moschino__illustration--two,
+.moschino__illustration--three,
+.moschino__illustration--four {
   width: 90vw;
   border: #ab7723 2px solid;
 }
