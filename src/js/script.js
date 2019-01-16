@@ -1,6 +1,3 @@
-var menu = document.getElementById("headerMenu");
-var works = document.getElementById("headerWorks");
-
 var index = 0;
 var speed = 1000;
 var totalSlides = 3;
@@ -16,13 +13,6 @@ var titleBackground = document.querySelectorAll(".project__title--background");
 var detailsContent = document.querySelectorAll(".details--content");
 var countNumber = document.querySelectorAll(".project__count--number");
 
-// Menu
-
-works.addEventListener("click", function() {
-  menu.classList.toggle("isClicked");
-});
-
-//
 
 // Slider
 
@@ -79,6 +69,7 @@ function next() {
       mover.style.transform = "translateY(" + translateMover + "vh)";
       index = 0;
     }
+    enter();
     setTimeout(function() {
       addListener();
     }, speed);
@@ -95,8 +86,9 @@ function back() {
     } else {
       translateMover = (totalSlides - 1) * -100;
       mover.style.transform = "translateY(" + translateMover + "vh)";
-      index = 1;
+      index = totalSlides - 1;
     }
+    enter();
     setTimeout(function() {
       addListener();
     }, speed);
@@ -112,26 +104,11 @@ function leave() {
 
     titleBackground[index].classList.add("leave");
 
-    detailsContent[index].classList.add("leave");
-    detailsContent[index + 1].classList.add("leave"); //si mal codé
-    detailsContent[index + 2].classList.add("leave");
+    detailsContent[0].classList.add("leave");
+    detailsContent[1].classList.add("leave"); //si mal codé
+    detailsContent[2].classList.add("leave");
 
     countNumber[index].classList.add("leave");
-
-    setTimeout(function() {
-      bearMouth.classList.remove("leave");
-      bearHead.classList.remove("leave");
-      bearMouth.classList.add("enter");
-      bearHead.classList.add("enter");
-
-      titleBackground[index + 1].classList.remove("leave");
-
-      detailsContent[index + 3].classList.remove("leave");
-      detailsContent[index + 4].classList.remove("leave"); //si mal codé
-      detailsContent[index + 5].classList.remove("leave");
-
-      countNumber[index + 1].classList.remove("leave");
-    }, speed);
   }
 
   if (index === 1) {
@@ -142,26 +119,66 @@ function leave() {
 
     titleBackground[index].classList.add("leave");
 
-    detailsContent[index + 2].classList.add("leave");
-    detailsContent[index + 3].classList.add("leave"); //si mal codé
-    detailsContent[index + 4].classList.add("leave");
+    detailsContent[3].classList.add("leave");
+    detailsContent[4].classList.add("leave"); //si mal codé
+    detailsContent[5].classList.add("leave");
 
     countNumber[index].classList.add("leave");
-
-    setTimeout(function() {
-      wikipediaSvg.classList.remove("leave");
-      wikipediaSvg.classList.add("enter");
-
-      titleBackground[index - 1].classList.remove("leave");
-
-      detailsContent[0].classList.remove("leave");
-      detailsContent[1].classList.remove("leave"); //si mal codé
-      detailsContent[2].classList.remove("leave");
-
-      countNumber[index - 1].classList.remove("leave");
-    }, speed);
   }
 
   if (index === 2) {
+    nespressoSvg.classList.remove("enter");
+    nespressoSvg.classList.add("leave");
+
+    titleBackground[index].classList.add("leave");
+
+    detailsContent[6].classList.add("leave");
+    detailsContent[7].classList.add("leave"); //si mal codé
+    detailsContent[8].classList.add("leave");
+
+    countNumber[index].classList.add("leave");
+  }
+}
+
+function enter() {
+  if (index === 0) {
+    wikipediaSvg.classList.remove("leave");
+    wikipediaSvg.classList.add("enter");
+
+    titleBackground[index].classList.remove("leave");
+
+    detailsContent[0].classList.remove("leave");
+    detailsContent[1].classList.remove("leave"); //si mal codé
+    detailsContent[2].classList.remove("leave");
+
+    countNumber[index].classList.remove("leave");
+  }
+
+  if (index === 1) {
+  bearMouth.classList.remove("leave");
+  bearHead.classList.remove("leave");
+  bearMouth.classList.add("enter");
+  bearHead.classList.add("enter");
+
+  titleBackground[index].classList.remove("leave");
+
+  detailsContent[3].classList.remove("leave");
+  detailsContent[4].classList.remove("leave"); //si mal codé
+  detailsContent[5].classList.remove("leave");
+
+  countNumber[index].classList.remove("leave");
+  }
+
+  if (index === 2) {
+    nespressoSvg.classList.remove("leave");
+    nespressoSvg.classList.add("enter");
+
+    titleBackground[index].classList.remove("leave");
+
+    detailsContent[6].classList.remove("leave");
+    detailsContent[7].classList.remove("leave"); //si mal codé
+    detailsContent[8].classList.remove("leave");
+
+    countNumber[index].classList.remove("leave");
   }
 }

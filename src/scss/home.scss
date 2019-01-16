@@ -54,6 +54,12 @@
   }
 }
 
+@keyframes dashNespresso {
+  to {
+    stroke-dashoffset: 1500;
+  }
+}
+
 @keyframes dashBearHeadEnter {
   to {
     stroke-dashoffset: 0;
@@ -65,6 +71,13 @@
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes dashNespressoEnter {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 
 * {
   box-sizing: border-box;
@@ -238,6 +251,24 @@ a {
 .bear--mouth.enter {
   stroke-dashoffset: 900;
   animation: dashBearMouthEnter 1s linear forwards;
+}
+
+.nespressoSvg {
+  fill: #ffffff;
+  stroke: #000000;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 0;
+}
+
+.nespressoSvg.leave {
+  animation: dashNespresso 1s linear forwards;
+}
+
+.nespressoSvg.enter {
+  stroke-dashoffset: 1500;
+  animation: dashNespressoEnter 1s linear forwards;
 }
 
 .project__title {
@@ -426,13 +457,4 @@ a {
 
 .project--nespresso .arrow1 {
   stroke: black;
-}
-
-.nespressoSvg {
-  fill: #ffffff;
-  stroke: #000000;
-  stroke-width: 3;
-  stroke-miterlimit: 10;
-  // stroke-dasharray: 830;
-  // stroke-dashoffset: 0;
 }
