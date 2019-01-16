@@ -1,9 +1,9 @@
-.title__background--moschino {
-  background: #ab7723;
+.title__background--nespresso {
+  background: black;
 }
 
 
-.title__moschino {
+.title__nespresso {
   position: absolute;
   color: white;
   font-size: 35px;
@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.moschino__description {
+.nespresso__description {
   font-family: "Neue Haas Grotesk", sans-serif;
   font-size: 12px;
   margin: 20px 20px 0 20px;
@@ -20,7 +20,7 @@
   color: rgb(87, 87, 87);
 }
 
-.moschino__illustration {
+.nespresso__illustration {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +29,7 @@
   margin-top: 15px;
 }
 
-.moschino__illustration--one, .moschino__illustration--two, .moschino__illustration--three, .moschino__illustration--four {
+.nespresso__illustration--one, .nespresso__illustration--two, .nespresso__illustration--three, .nespresso__illustration--four {
   width: 90vw;
-  border: #ab7723 2px solid;
+  border: black 2px solid;
 }

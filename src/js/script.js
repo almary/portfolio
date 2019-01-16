@@ -13,7 +13,6 @@ var titleBackground = document.querySelectorAll(".project__title--background");
 var detailsContent = document.querySelectorAll(".details--content");
 var countNumber = document.querySelectorAll(".project__count--number");
 
-
 // Slider
 
 addListener();
@@ -99,86 +98,92 @@ function leave() {
   removeListener();
 
   if (index === 0) {
-    wikipediaSvg.classList.remove("enter");
-    wikipediaSvg.classList.add("leave");
+    leaveSvg(wikipediaSvg);
 
-    titleBackground[index].classList.add("leave");
+    addLeave();
 
-    detailsContent[0].classList.add("leave");
-    detailsContent[1].classList.add("leave"); //si mal codé
-    detailsContent[2].classList.add("leave");
-
-    countNumber[index].classList.add("leave");
+    for (let i = 0; i < 3; i++) {
+      addDetails(i);
+    }
   }
 
   if (index === 1) {
-    bearMouth.classList.remove("enter");
-    bearHead.classList.remove("enter");
-    bearMouth.classList.add("leave");
-    bearHead.classList.add("leave");
+    leaveSvg(bearMouth);
+    leaveSvg(bearHead);
 
-    titleBackground[index].classList.add("leave");
+    addLeave();
 
-    detailsContent[3].classList.add("leave");
-    detailsContent[4].classList.add("leave"); //si mal codé
-    detailsContent[5].classList.add("leave");
-
-    countNumber[index].classList.add("leave");
+    for (let i = 3; i < 6; i++) {
+      addDetails(i);
+    }
   }
 
   if (index === 2) {
-    nespressoSvg.classList.remove("enter");
-    nespressoSvg.classList.add("leave");
+    leaveSvg(nespressoSvg);
 
-    titleBackground[index].classList.add("leave");
+    addLeave();
 
-    detailsContent[6].classList.add("leave");
-    detailsContent[7].classList.add("leave"); //si mal codé
-    detailsContent[8].classList.add("leave");
-
-    countNumber[index].classList.add("leave");
+    for (let i = 6; i < 9; i++) {
+      addDetails(i);
+    }
   }
 }
 
 function enter() {
   if (index === 0) {
-    wikipediaSvg.classList.remove("leave");
-    wikipediaSvg.classList.add("enter");
+    enterSvg(wikipediaSvg);
 
-    titleBackground[index].classList.remove("leave");
+    removeLeave();
 
-    detailsContent[0].classList.remove("leave");
-    detailsContent[1].classList.remove("leave"); //si mal codé
-    detailsContent[2].classList.remove("leave");
-
-    countNumber[index].classList.remove("leave");
+    for (let i = 0; i < 3; i++) {
+      removeDetails(i);
+    }
   }
 
   if (index === 1) {
-  bearMouth.classList.remove("leave");
-  bearHead.classList.remove("leave");
-  bearMouth.classList.add("enter");
-  bearHead.classList.add("enter");
+    enterSvg(bearMouth);
+    enterSvg(bearHead);
 
-  titleBackground[index].classList.remove("leave");
-
-  detailsContent[3].classList.remove("leave");
-  detailsContent[4].classList.remove("leave"); //si mal codé
-  detailsContent[5].classList.remove("leave");
-
-  countNumber[index].classList.remove("leave");
+    removeLeave();
+    for (let i = 3; i < 6; i++) {
+      removeDetails(i);
+    }
   }
 
   if (index === 2) {
-    nespressoSvg.classList.remove("leave");
-    nespressoSvg.classList.add("enter");
+    enterSvg(nespressoSvg);
 
-    titleBackground[index].classList.remove("leave");
-
-    detailsContent[6].classList.remove("leave");
-    detailsContent[7].classList.remove("leave"); //si mal codé
-    detailsContent[8].classList.remove("leave");
-
-    countNumber[index].classList.remove("leave");
+    removeLeave();
+    for (let i = 6; i < 9; i++) {
+      removeDetails(i);
+    }
   }
+}
+
+function leaveSvg(name) {
+  name.classList.remove("enter");
+  name.classList.add("leave");
+}
+
+function enterSvg(name) {
+  name.classList.remove("leave");
+  name.classList.add("enter");
+}
+
+function addLeave() {
+  titleBackground[index].classList.add("leave");
+  countNumber[index].classList.add("leave");
+}
+
+function removeLeave() {
+  titleBackground[index].classList.remove("leave");
+  countNumber[index].classList.remove("leave");
+}
+
+function addDetails(i) {
+  detailsContent[i].classList.add("leave");
+}
+
+function removeDetails(i) {
+  detailsContent[i].classList.remove("leave");
 }
