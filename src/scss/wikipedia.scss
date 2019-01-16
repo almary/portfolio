@@ -1,21 +1,21 @@
-// .header--wikipedia .header--logoSvg {
-//   display: block;
-//   height: 20px;
-//   width: auto;
-//   fill: #ffffff;
-// }
+.header--wikipedia .header--logoSvg {
+  display: block;
+  height: 20px;
+  width: auto;
+  fill: #ffffff;
+}
 
-// .header--wikipedia.isScrolled .header--logoSvg {
-//   fill: black;
-// }
+.header--wikipedia.isScrolled .header--logoSvg {
+  fill: black;
+}
 
-// .header--wikipedia .header--works, .header--wikipedia .header--about {
-//   color: white;
-// }
+.header--wikipedia .header--works, .header--wikipedia .header--about {
+  color: white;
+}
 
-// .header--wikipedia.isScrolled .header--works, .header--wikipedia.isScrolled .header--about {
-//   color: black;
-// }
+.header--wikipedia.isScrolled .header--works, .header--wikipedia.isScrolled .header--about {
+  color: black;
+}
 
 
 .title {
