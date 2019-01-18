@@ -42,6 +42,21 @@
   }
 }
 
+
+@keyframes backgroundEnter {
+  to {
+    opacity: 0.3;
+    transform: none;
+  }
+}
+
+@keyframes backgroundLeave {
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
 @keyframes dashBearHead {
   to {
     stroke-dashoffset: 830;
@@ -196,6 +211,7 @@ a {
   width: 250px;
   height: 210px;
   padding-bottom: 30px;
+  position: relative;
 }
 
 .project--moschino .project__logo {
@@ -212,7 +228,7 @@ a {
   stroke-width: 5;
   stroke-miterlimit: 10;
   stroke-dasharray: 6000;
-  stroke-dashoffset: 0; 
+  stroke-dashoffset: 0;
 }
 
 .wikipediaSvg.leave {
@@ -222,6 +238,34 @@ a {
 .wikipediaSvg.enter {
   stroke-dashoffset: 6000;
   animation: dashEnter 1s linear forwards;
+}
+
+.wikipediaBackground, .bearBackground, .nespressoBackground {
+  opacity: 0;
+  transform: translateY(10px);
+  fill: #3c6dbf;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.bearBackground {
+  fill: #ab7723;
+  top: 3px;
+  left: 3px;
+}
+
+.nespressoBackground {
+  fill: black;
+}
+
+.wikipediaBackground.enter, .bearBackground.enter, .nespressoBackground.enter {
+  animation: backgroundEnter 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.wikipediaBackground.leave, .bearBackground.leave, .nespressoBackground.leave {
+  animation: backgroundLeave 1s forwards;               //marche pas
 }
 
 .bear--mouth,

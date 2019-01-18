@@ -12,6 +12,9 @@ var nespressoSvg = document.getElementById("nespressoSvg");
 var titleBackground = document.querySelectorAll(".project__title--background");
 var detailsContent = document.querySelectorAll(".details--content");
 var countNumber = document.querySelectorAll(".project__count--number");
+var wikipediaBackground = document.querySelector(".wikipediaBackground");
+var bearBackground = document.querySelector(".bearBackground");
+var nespressoBackground = document.querySelector(".nespressoBackground");
 
 // Slider
 
@@ -99,6 +102,7 @@ function leave() {
 
   if (index === 0) {
     leaveSvg(wikipediaSvg);
+    leaveSvg(wikipediaBackground);
 
     addLeave();
 
@@ -110,6 +114,7 @@ function leave() {
   if (index === 1) {
     leaveSvg(bearMouth);
     leaveSvg(bearHead);
+    leaveSvg(bearBackground);
 
     addLeave();
 
@@ -120,6 +125,7 @@ function leave() {
 
   if (index === 2) {
     leaveSvg(nespressoSvg);
+    leaveSvg(nespressoBackground);
 
     addLeave();
 
@@ -132,6 +138,7 @@ function leave() {
 function enter() {
   if (index === 0) {
     enterSvg(wikipediaSvg);
+    enterSvg(wikipediaBackground);
 
     removeLeave();
 
@@ -143,6 +150,7 @@ function enter() {
   if (index === 1) {
     enterSvg(bearMouth);
     enterSvg(bearHead);
+    enterSvg(bearBackground);
 
     removeLeave();
     for (let i = 3; i < 6; i++) {
@@ -152,6 +160,7 @@ function enter() {
 
   if (index === 2) {
     enterSvg(nespressoSvg);
+    enterSvg(nespressoBackground);
 
     removeLeave();
     for (let i = 6; i < 9; i++) {
