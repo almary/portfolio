@@ -43,6 +43,12 @@
 }
 
 
+@keyframes backgroundWikipediaEnter {
+  to {
+    opacity: 0.5;
+    transform: none;
+  }
+}
 @keyframes backgroundEnter {
   to {
     opacity: 0.3;
@@ -51,6 +57,10 @@
 }
 
 @keyframes backgroundLeave {
+  from {
+    opacity: 0.3;
+    transform: none;
+  }
   to {
     opacity: 0;
     transform: translateY(10px);
@@ -259,7 +269,12 @@ a {
   fill: black;
 }
 
-.wikipediaBackground.enter, .bearBackground.enter, .nespressoBackground.enter {
+.wikipediaBackground.enter {
+  animation: backgroundWikipediaEnter 1s forwards;
+  animation-delay: 0.3s;  // repet animation delay partout
+}
+
+.bearBackground.enter, .nespressoBackground.enter {
   animation: backgroundEnter 1s forwards;
   animation-delay: 0.3s;
 }
@@ -347,26 +362,41 @@ a {
   transition: background-position 1s ease-in-out;
 }
 
-// .project__title--name {
-//   position: absolute;
-// }
-
-// animation click
-
-// .project--wikipedia .project__title--background {
-//   transform: translateY(-58vh); // -450px
-//   width: 100vw;
-//   height: 200px;
-// }
-
-// .project--wikipedia .project__title--name {
-//   top: 65px;
-// }
-
-//
-
 .project__title--background.leave {
   background-position: 0 -100%;
+}
+
+.home .project__title--background.isClicked {
+  background: white;
+}
+
+.project__title--backgroundCopy {
+  width: 260px;
+  height: 30px;
+  top: 55vh;
+  opacity: 0;
+  transition: width 1s, height 1s, top 1s;
+  background: #3c6dbf;
+  position: absolute;
+}
+
+.project--moschino .project__title--backgroundCopy {
+  background: #ab7723;
+}
+
+.project__title--backgroundCopy.isClicked {
+  width: 100vw;
+  height: 120px;
+  top: 23px;
+  opacity: 1;
+}
+
+.project__title--nameCopy {
+  position: absolute;
+}
+
+.project__title--nameCopy.isClicked {
+  bottom: 15px;
 }
 
 .project--moschino .project__title--background {

@@ -19,6 +19,7 @@
     />
     <script defer src="js/script.js"></script>
     <script defer src="js/menu.js"></script>
+    <!-- c'est sale au dessus, à résoudre -->
   </head>
 
   <body>
@@ -59,7 +60,7 @@
       <div class="home__project" id="mover">
         <!--container de mes projets qui va bouger-->
         <div class="project project--wikipedia">
-          <a href="wikipedia.html">
+          <a href="#" id="projectClickWikipedia">
             <div class="project__visual">
               <!--projet wikipedia-->
               <div class="project__logo">
@@ -124,6 +125,13 @@
                 <div class="project__title project__title--background">
                   <div class="project__title project__title--name">
                     WIKIPEDIA
+                  </div>
+                  <div class="project__title project__title--backgroundCopy">
+                    <div
+                      class="project__title project__title--name project__title--nameCopy"
+                    >
+                      WIKIPEDIA
+                    </div>
                   </div>
                 </div>
                 <div class="project__cta">click to discover</div>
@@ -223,7 +231,7 @@
         <!----------------------------------->
 
         <div class="project project--moschino">
-          <a href="moschino.html">
+          <a href="#" id="projectClickMoschino">
             <div class="project__visual">
               <!--projet moschino-->
               <div class="project__logo">
@@ -313,6 +321,13 @@
                 <div class="project__title project__title--background leave">
                   <div class="project__title project__title--name">
                     MOSCHINO
+                  </div>
+                  <div class="project__title project__title--backgroundCopy">
+                    <div
+                      class="project__title project__title--name project__title--nameCopy"
+                    >
+                      MOSCHINO
+                    </div>
                   </div>
                 </div>
                 <div class="project__cta">click to discover</div>
@@ -410,8 +425,10 @@
           </div>
         </div>
 
+        <!-- -------------- -->
+
         <div class="project project--nespresso">
-          <a href="nespresso.html">
+          <a href="#" id="projectClickNespresso">
             <div class="project__visual">
               <!--projet nespresso-->
               <div class="project__logo">
@@ -438,24 +455,24 @@
                   />
                 </svg>
                 <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 545 448"
-                style="enable-background:new 0 0 545 448;"
-                xml:space="preserve"
-                class="nespressoBackground"
-              >
-                <path
-                  d="M532.4,425.2c-79.1,27.6-173.8,5-225.5-45.3c-8-6.7-36.1-37.2-47.1-50.3c-24.7-29.1-57.8-75.1-86-111.1v146.9
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 545 448"
+                  style="enable-background:new 0 0 545 448;"
+                  xml:space="preserve"
+                  class="nespressoBackground"
+                >
+                  <path
+                    d="M532.4,425.2c-79.1,27.6-173.8,5-225.5-45.3c-8-6.7-36.1-37.2-47.1-50.3c-24.7-29.1-57.8-75.1-86-111.1v146.9
                   h-40.1v-291C178.7,111,224.1,183.8,258,227.6c0,0,66,88.8,93.5,120.3c21.3,26.2,58.3,54.9,84.1,64.4c34.5,13.8,69.6,15.9,96.8,10.1
                   L532.4,425.2L532.4,425.2z M10.4,24.7v-2.8c79.1-27.6,173.8-5,225.5,45.3c8,6.7,36.1,37.2,47.1,50.3c24.8,29.1,57.8,75.1,86,111.1
                   V81.7h40.1v291.1c-44.9-36.7-90.3-109.4-124.3-153.2c0,0-66-88.8-93.5-120.3c-21.3-26.2-58.3-54.9-84.1-64.4
                   C72.6,21,37.6,18.9,10.4,24.7"
-                />
-              </svg>
+                  />
+                </svg>
               </div>
               <div class="project__title">
                 <div class="project__title project__title--background leave">

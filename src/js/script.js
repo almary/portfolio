@@ -16,6 +16,12 @@ var wikipediaBackground = document.querySelector(".wikipediaBackground");
 var bearBackground = document.querySelector(".bearBackground");
 var nespressoBackground = document.querySelector(".nespressoBackground");
 
+var projectClickWikiepdia = document.getElementById("projectClickWikipedia");
+
+var backgroundCopy = document.querySelectorAll(".project__title--backgroundCopy");
+var nameCopy = document.querySelectorAll(".project__title--nameCopy");
+var backgrounds = document.querySelectorAll('.project__title--background');
+
 // Slider
 
 addListener();
@@ -195,4 +201,35 @@ function addDetails(i) {
 
 function removeDetails(i) {
   detailsContent[i].classList.remove("leave");
+}
+
+// Event listener projects click
+//wikipedia
+projectClickWikiepdia.addEventListener("click", function(){
+  delayUrlLoad("wikipedia.html", speed);
+  transition();
+});
+
+//moschino
+projectClickMoschino.addEventListener("click", function(){
+  delayUrlLoad("moschino.html", speed);
+  transition();
+});
+
+// Timeout on click
+function delayUrlLoad(url, mils) {
+  setTimeout(function() {
+    window.location.href = url;
+  }, mils);
+}
+
+// Transition click
+function transition() {
+  for (let i = 0; i < backgrounds.length; i++) {
+    console.log("test");
+    console.log(backgrounds[i]);
+    backgroundCopy[i].classList.add("isClicked");
+    nameCopy[i].classList.add("isClicked");
+    backgrounds[i].classList.add("isClicked");
+  }
 }
