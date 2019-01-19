@@ -140,7 +140,25 @@ a {
 }
 
 .header--works {
+  overflow: hidden;
+  vertical-align: bottom;
+  display: inline-block;
+  width: auto;
+  height: 17px;
   margin-right: 5vw;
+}
+
+.header--about {
+  height: 17px;
+  display: inline-block;
+}
+
+.header--worksMover {
+  transition: transform 0.5s;
+}
+
+.header--worksMover.isClicked {
+  transform: translateY(-17px);
 }
 
 // .menu__title {
@@ -382,6 +400,10 @@ a {
 
 .project--moschino .project__title--backgroundCopy {
   background: #ab7723;
+}
+
+.project--nespresso .project__title--backgroundCopy {
+  background: black;
 }
 
 .project__title--backgroundCopy.isClicked {

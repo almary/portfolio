@@ -17,6 +17,8 @@ var bearBackground = document.querySelector(".bearBackground");
 var nespressoBackground = document.querySelector(".nespressoBackground");
 
 var projectClickWikiepdia = document.getElementById("projectClickWikipedia");
+var projectClickMoschino = document.getElementById("projectClickMoschino");
+var projectClickNespresso = document.getElementById("projectClickNespresso");
 
 var backgroundCopy = document.querySelectorAll(".project__title--backgroundCopy");
 var nameCopy = document.querySelectorAll(".project__title--nameCopy");
@@ -213,6 +215,12 @@ projectClickWikiepdia.addEventListener("click", function(){
 //moschino
 projectClickMoschino.addEventListener("click", function(){
   delayUrlLoad("moschino.html", speed);
+  transition();
+});
+
+//nespresso
+projectClickNespresso.addEventListener("click", function(){
+  delayUrlLoad("nespresso.html", speed);
   transition();
 });
 
