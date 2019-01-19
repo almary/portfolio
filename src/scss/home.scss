@@ -131,8 +131,14 @@ a {
 }
 
 .header--logo {
-  font-size: 30px;
   margin-left: 5vw;
+}
+
+.header--logoSvg {
+  display: block;
+  height: 20px;
+  width: auto;
+  fill: black;
 }
 
 .headerWrapper {
