@@ -26,6 +26,12 @@
   position: relative;
 }
 
+.text {
+  font-family: "Neue Haas Grotesk", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+}
+
 .title__background {
   width: 100vw;
   height: 120px;
@@ -81,20 +87,36 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 70vw;
-  font-family: "Neue Haas Grotesk", sans-serif;
-  font-size: 17px;
-  font-weight: 300;
+  width: 80vw;
   margin: 0 auto;
   margin-top: 80px;
   line-height: 1.3em;
-  color: rgb(87, 87, 87);
+  color: #333333;
+  border: red 2px solid;
+  position: relative;
+}
+
+.wikipedia__description:nth-child(4) {
+  height: 30vw;
 }
 
 .description__text {
-  width: 400px;
-margin: 0 100px 0 100px
+  width: 250px;
+  margin: 0 50px 0 50px
 }
+
+.description__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: inherit;
+}
+
+.description__video {
+  max-width: 50vw;
+}
+
+
 
 // .wikipedia__illustration {
 //   display: flex;
