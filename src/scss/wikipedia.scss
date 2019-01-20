@@ -44,6 +44,20 @@
   font-weight: 300;
 }
 
+.text--center {
+  text-align: center;
+}
+
+.text::selection {
+  background: #3c6dbf; /* WebKit/Blink Browsers */
+  color: white;
+}
+
+.text::-moz-selection {
+  background: #3c6dbf; /* Gecko Browsers */
+  color: white;
+}
+
 .title__background {
   width: 100vw;
   height: 120px;
@@ -120,9 +134,14 @@
   // background: white;
 }
 
+.wikipedia__description--column {
+  flex-direction: column;
+  height: 110vw;
+}
+
 .description__text {
   width: 250px;
-  margin: 0 50px 0 50px
+  margin: 0 50px 0 50px;
 }
 
 .description__wrapper {
@@ -136,13 +155,15 @@
   max-width: 50vw;
 }
 
-.description__font {
-  width:50vw;
-height: auto;
-box-shadow: 2px 2px 50px #f0f0f0;
+.description__image {
+  width: 50vw;
+  height: auto;
+  box-shadow: 2px 2px 50px #f0f0f0;
 }
 
-
+.description__image--large {
+  width: 70vw;
+}
 
 // .wikipedia__illustration {
 //   display: flex;
@@ -171,18 +192,6 @@ box-shadow: 2px 2px 50px #f0f0f0;
 //   border: black 1.5px solid;
 //   text-align: center;
 // }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // @keyframes slide {
 //   to {
