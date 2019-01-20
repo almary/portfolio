@@ -5,4 +5,3 @@ window.onscroll = () => {
   else navWiki.className = "header header--wikipedia isScrolled";
 };
 //
-
