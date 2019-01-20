@@ -1,5 +1,11 @@
 //virer les classes en trop du html ??!!
 
+@mixin large {
+  @media (min-width: 750px) {
+    @content;
+  }
+}
+
 @font-face {
   font-family: "Gilroy";
   src: url("../font/Gilroy-ExtraBold.woff2") format("woff2"),
@@ -41,7 +47,6 @@
     stroke-dashoffset: 0;
   }
 }
-
 
 @keyframes backgroundWikipediaEnter {
   to {
@@ -103,7 +108,6 @@
   }
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -128,6 +132,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include large {
+    padding-top: 30px;
+  }
 }
 
 .header--logo {
@@ -139,10 +147,18 @@ a {
   height: 20px;
   width: auto;
   fill: black;
+
+  @include large {
+    height: 25px;
+  }
 }
 
 .headerWrapper {
   margin-right: 5vw;
+
+  @include large {
+    font-size: 22px;
+  }
 }
 
 .header--works {
@@ -152,6 +168,10 @@ a {
   width: auto;
   height: 17px;
   margin-right: 5vw;
+
+  @include large {
+    height: 22px;
+  }
 }
 
 .header--about {
@@ -165,6 +185,10 @@ a {
 
 .header--worksMover.isClicked {
   transform: translateY(-17px);
+
+  @include large {
+    transform: translateY(-23px);
+  }
 }
 
 // .menu__title {
@@ -185,14 +209,16 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 35px;
-  transition: height 1s;   //transform du height ici, pas opti ?
+  transition: height 1s; //transform du height ici, pas opti ?
 }
 
 .header--menu.isClicked {
- height: 100vh;
+  height: 100vh;
 }
 
-.menu__wikipedia--background, .menu__moschino--background, .menu__nespresso--background {
+.menu__wikipedia--background,
+.menu__moschino--background,
+.menu__nespresso--background {
   width: 230px;
   height: 40px;
   display: flex;
@@ -200,7 +226,6 @@ a {
   align-items: center;
   margin: 10px;
   color: white;
-
 }
 
 .menu__wikipedia--background {
@@ -246,14 +271,27 @@ a {
   height: 210px;
   padding-bottom: 30px;
   position: relative;
+
+  @include large {
+    width: 500px;
+    height: 370px;
+  }
 }
 
 .project--moschino .project__logo {
   width: 220px;
+  @include large {
+    height: 370px;
+    width: 400px;
+  }
 }
 
 .project--nespresso .project__logo {
   width: 240px;
+  @include large {
+    height: 370px;
+    width: 430px;
+  }
 }
 
 .wikipediaSvg {
@@ -263,6 +301,9 @@ a {
   stroke-miterlimit: 10;
   stroke-dasharray: 6000;
   stroke-dashoffset: 0;
+  @include large {
+    stroke-width: 4;
+  }
 }
 
 .wikipediaSvg.leave {
@@ -274,7 +315,9 @@ a {
   animation: dashEnter 1s linear forwards;
 }
 
-.wikipediaBackground, .bearBackground, .nespressoBackground {
+.wikipediaBackground,
+.bearBackground,
+.nespressoBackground {
   opacity: 0;
   transform: translateY(10px);
   fill: #3c6dbf;
@@ -295,16 +338,19 @@ a {
 
 .wikipediaBackground.enter {
   animation: backgroundWikipediaEnter 1s forwards;
-  animation-delay: 0.3s;  // repet animation delay partout
+  animation-delay: 0.3s; // repet animation delay partout
 }
 
-.bearBackground.enter, .nespressoBackground.enter {
+.bearBackground.enter,
+.nespressoBackground.enter {
   animation: backgroundEnter 1s forwards;
   animation-delay: 0.3s;
 }
 
-.wikipediaBackground.leave, .bearBackground.leave, .nespressoBackground.leave {
-  animation: backgroundLeave 1s forwards;               //marche pas
+.wikipediaBackground.leave,
+.bearBackground.leave,
+.nespressoBackground.leave {
+  animation: backgroundLeave 1s forwards; //marche pas
 }
 
 .bear--mouth,
@@ -354,20 +400,15 @@ a {
   animation: dashNespressoEnter 1s linear forwards;
 }
 
-.project__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; //repetition display flex
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
 .project__cta {
   color: #3c6dbf;
   font-size: 12px;
   margin-top: 3px;
+
+  @include large {
+    margin-top: 10px;
+    font-size: 16px;
+  }
 }
 
 .project--moschino .project__cta {
@@ -378,12 +419,28 @@ a {
   color: black;
 }
 
+.project__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; //repetition display flex
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  @include large {
+    font-size: 60px;
+  }
+}
+
 .project__title--background {
   // position: relative;
   background-size: 100% 200%;
   background-image: linear-gradient(to bottom, #3c6dbf 50%, white 50%);
   width: 260px;
   transition: background-position 1s ease-in-out;
+  @include large {
+    width: 440px;
+  }
 }
 
 .project__title--background.leave {
@@ -442,6 +499,14 @@ a {
   flex-direction: row;
   justify-content: space-around;
   line-height: 1.05em;
+  @include large {
+    position: absolute;
+    left: 5vw;
+    flex-direction: column;
+    height: 300px;
+    width: auto;
+    font-size: 25px;
+  }
 }
 
 .details--title {
@@ -458,10 +523,16 @@ a {
   font-size: 14px;
   color: #3c6dbf;
   transition: transform 1s ease-in-out;
+  @include large {
+    font-size: 20px;
+  }
 }
 
 .details--content.leave {
   transform: translateY(30px);
+  @include large {
+    transform: translateY(50px);
+  }
 }
 
 .project--moschino .details--content {
@@ -479,12 +550,21 @@ a {
   flex-direction: row;
   justify-content: center; //repet
   margin-top: 10px;
-  //  border: red 2px solid;
+  @include large {
+    position: absolute;
+    right: 5vw;
+    height: 300px;
+    width: auto;
+    font-size: 20px;
+  }
 }
 
 .project__count {
   position: absolute;
   top: 5vh;
+  @include large {
+    position: initial;
+  }
 }
 
 .project__count,
@@ -493,11 +573,19 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-around; //repet display
+  @include large {
+    width: auto;
+    flex-direction: column;
+  }
 }
 
 .project__count--slash {
   color: #3c6dbf; ///repet
   position: absolute;
+  @include large {
+    position: initial;
+    text-align: center;
+  }
 }
 
 .project--moschino .project__count--slash {
@@ -515,6 +603,9 @@ a {
 
 .project__count--number.leave {
   transform: translateY(15px);
+  @include large {
+    transform: translateY(19px);
+  }
 }
 
 .project__arrow {
@@ -522,6 +613,10 @@ a {
   align-items: center;
   width: 340px;
   top: 11vh;
+
+  @include large {
+    display: none;
+  }
 }
 
 .project__arrow--left,
