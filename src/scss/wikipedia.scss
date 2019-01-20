@@ -3,20 +3,24 @@
   height: 20px;
   width: auto;
   fill: #ffffff;
+  @include large {
+    height: 25px;
+  }
 }
 
 .header--wikipedia.isScrolled .header--logoSvg {
   fill: black;
 }
 
-.header--wikipedia .header--works, .header--wikipedia .header--about {
+.header--wikipedia .header--works,
+.header--wikipedia .header--about {
   color: white;
 }
 
-.header--wikipedia.isScrolled .header--works, .header--wikipedia.isScrolled .header--about {
+.header--wikipedia.isScrolled .header--works,
+.header--wikipedia.isScrolled .header--about {
   color: black;
 }
-
 
 .title {
   position: relative;
@@ -25,6 +29,9 @@
 .title__background {
   width: 100vw;
   height: 120px;
+  @include large {
+    height: 155px;
+  }
 }
 
 .title__background--wikipedia {
@@ -38,40 +45,96 @@
   bottom: 15px;
   width: 100vw; // repet
   text-align: center;
+  @include large {
+    font-size: 60px;
+  }
+}
+
+.wikipedia__lines {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.wikipedia__lines--one,
+.wikipedia__lines--two,
+.wikipedia__lines--three,
+.wikipedia__lines--four {
+  height: 100%;
+  width: 1px;
+  background: #3c6dbf;
+}
+
+.wikipediaSvg--project {
+  width: 400px;
+  height: auto;
 }
 
 .wikipedia__description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 70vw;
   font-family: "Neue Haas Grotesk", sans-serif;
-  font-size: 12px;
-  margin: 20px 20px 0 20px;
+  font-size: 17px;
+  font-weight: 300;
+  margin: 0 auto;
+  margin-top: 80px;
   line-height: 1.3em;
   color: rgb(87, 87, 87);
 }
 
-.wikipedia__illustration {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  margin-top: 15px;
+.description__text {
+  width: 400px;
+margin: 0 100px 0 100px
 }
 
-.wikipedia__illustration--one, .wikipedia__illustration--two, .wikipedia__illustration--three, .wikipedia__illustration--four {
-  width: 90vw;
-  border: #3c6dbf 2px solid;
-}
+// .wikipedia__illustration {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100vw;
+//   margin-top: 15px;
+// }
 
-.footer {
-  margin: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  height: 100px;
-  border: black 1.5px solid;
-  text-align: center;
-}
+// .wikipedia__illustration--one,
+// .wikipedia__illustration--two,
+// .wikipedia__illustration--three,
+// .wikipedia__illustration--four {
+//   width: 90vw;
+//   border: #3c6dbf 2px solid;
+// }
+
+// .footer {
+//   margin: 15px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 40px;
+//   height: 100px;
+//   border: black 1.5px solid;
+//   text-align: center;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // @keyframes slide {
 //   to {

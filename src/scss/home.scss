@@ -488,10 +488,11 @@ a {
 .project__title--backgroundCopy.isClicked {
   width: 100vw;
   height: 120px;
-  top: 23px;
+  top: 4vh;
   opacity: 1;
   @include large {
     top: 0;
+    height: 155px;
   }
 }
 
@@ -512,12 +513,12 @@ a {
 }
 
 .project__details--wrapper {
-  @include large {
-  width: 50px;
-  height: 300px;
-  position: absolute;
-  left: 5vw;
   overflow: hidden;
+  @include large {
+    width: 50px;
+    height: 300px;
+    position: absolute;
+    left: 5vw;
   }
 }
 
@@ -531,19 +532,18 @@ a {
   line-height: 1.05em;
   color: #3c6dbf;
   transition: transform 1s ease-in-out;
-
   @include large {
     margin-top: 0;
     font-size: 40px;
     transform: rotate(-90deg) translateX(-310px);
-    transform-origin:top left
+    transform-origin: top left;
   }
 }
 
 .project__details.leave {
   transform: translateY(30px);
   @include large {
-    transform: rotate(-90deg) translateX(-600px);
+    transform: rotate(-90deg) translateX(-550px);
   }
 }
 

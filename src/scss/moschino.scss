@@ -3,6 +3,9 @@
   height: 20px;
   width: auto;
   fill: #ffffff;
+  @include large {
+    height: 25px;
+  }
 }
 
 .header--moschino.isScrolled .header--logoSvg {
@@ -30,6 +33,9 @@
   bottom: 15px;
   width: 100vw; // repet
   text-align: center;
+  @include large {
+    font-size: 60px
+   }
 }
 
 .moschino__description {
