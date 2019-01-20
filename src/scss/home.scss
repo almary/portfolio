@@ -266,7 +266,7 @@ a {
   transform: translateY(-4vh);
 
   @include large {
-  transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -491,7 +491,7 @@ a {
   top: 23px;
   opacity: 1;
   @include large {
-    top: 39px;
+    top: 0;
   }
 }
 
@@ -511,56 +511,83 @@ a {
   background-image: linear-gradient(to bottom, black 50%, white 50%);
 }
 
-.project__details {
-  width: 310px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  line-height: 1.05em;
+.project__details--wrapper {
   @include large {
-    position: absolute;
-    left: 5vw;
-    flex-direction: column;
-    height: 300px;
-    width: auto;
-    font-size: 25px;
+  width: 50px;
+  height: 300px;
+  position: absolute;
+  left: 5vw;
+  overflow: hidden;
   }
 }
 
-.details--title {
-  font-weight: 300;
-  padding-bottom: 3px;
+.project__details {
+  width: 310px;
+  margin-top: 20px;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-around;
+  text-align: center;
+  line-height: 1.05em;
+  color: #3c6dbf;
+  transition: transform 1s ease-in-out;
+
+  @include large {
+    margin-top: 0;
+    font-size: 40px;
+    transform: rotate(-90deg) translateX(-310px);
+    transform-origin:top left
+  }
 }
+
+.project__details.leave {
+  transform: translateY(30px);
+  @include large {
+    transform: rotate(-90deg) translateX(-600px);
+  }
+}
+
+.project--moschino .project__details {
+  color: #ab7723;
+}
+
+.project--nespresso .project__details {
+  color: black;
+}
+
+// .details--title {
+//   font-weight: 300;
+//   padding-bottom: 3px;
+// }
 
 .wrapper--content,
 .wrapper--count {
   overflow: hidden;
 }
 
-.details--content {
-  font-size: 14px;
-  color: #3c6dbf;
-  transition: transform 1s ease-in-out;
-  @include large {
-    font-size: 20px;
-  }
-}
+// .details--content {
+//   font-size: 14px;
+//   color: #3c6dbf;
+//   transition: transform 1s ease-in-out;
+//   @include large {
+//     font-size: 20px;
+//   }
+// }
 
-.details--content.leave {
-  transform: translateY(30px);
-  @include large {
-    transform: translateY(50px);
-  }
-}
+// .details--content.leave {
+//   transform: translateY(30px);
+//   @include large {
+//     transform: translateY(50px);
+//   }
+// }
 
-.project--moschino .details--content {
-  color: #ab7723;
-}
+// .project--moschino .details--content {
+//   color: #ab7723;
+// }
 
-.project--nespresso .details--content {
-  color: black;
-}
+// .project--nespresso .details--content {
+//   color: black;
+// }
 
 .wrapper {
   position: relative;

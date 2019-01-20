@@ -10,7 +10,7 @@ var bearMouth = document.getElementById("bear--mouth");
 var bearHead = document.getElementById("bear--head");
 var nespressoSvg = document.getElementById("nespressoSvg");
 var titleBackground = document.querySelectorAll(".project__title--background");
-var detailsContent = document.querySelectorAll(".details--content");
+var details = document.querySelectorAll(".project__details");
 var countNumber = document.querySelectorAll(".project__count--number");
 var wikipediaBackground = document.querySelector(".wikipediaBackground");
 var bearBackground = document.querySelector(".bearBackground");
@@ -54,6 +54,7 @@ function wheelDetection(event) {
   }
 }
 
+
 function removeListener() {
   console.log("remove");
   for (let i = 0; i < arrowRight.length; i++) {
@@ -66,6 +67,7 @@ function removeListener() {
   // Scroll
   window.removeEventListener("wheel", wheelDetection);
 }
+
 
 function next() {
   leave();
@@ -113,10 +115,11 @@ function leave() {
     leaveSvg(wikipediaBackground);
 
     addLeave();
+    addDetails();
 
-    for (let i = 0; i < 3; i++) {
-      addDetails(i);
-    }
+    // for (let i = 0; i < 3; i++) {
+    //   addDetails(i);
+    // }
   }
 
   if (index === 1) {
@@ -125,10 +128,11 @@ function leave() {
     leaveSvg(bearBackground);
 
     addLeave();
+    addDetails();
 
-    for (let i = 3; i < 6; i++) {
-      addDetails(i);
-    }
+    // for (let i = 3; i < 6; i++) {
+    //   addDetails(i);
+    // }
   }
 
   if (index === 2) {
@@ -136,10 +140,11 @@ function leave() {
     leaveSvg(nespressoBackground);
 
     addLeave();
+      addDetails();
 
-    for (let i = 6; i < 9; i++) {
-      addDetails(i);
-    }
+    // for (let i = 6; i < 9; i++) {
+    //   addDetails(i);
+    // }
   }
 }
 
@@ -149,10 +154,12 @@ function enter() {
     enterSvg(wikipediaBackground);
 
     removeLeave();
+    removeDetails();
 
-    for (let i = 0; i < 3; i++) {
-      removeDetails(i);
-    }
+
+    // for (let i = 0; i < 3; i++) {
+    //   removeDetails(i);
+    // }
   }
 
   if (index === 1) {
@@ -161,9 +168,11 @@ function enter() {
     enterSvg(bearBackground);
 
     removeLeave();
-    for (let i = 3; i < 6; i++) {
-      removeDetails(i);
-    }
+    removeDetails();
+
+    // for (let i = 3; i < 6; i++) {
+    //   removeDetails(i);
+    // }
   }
 
   if (index === 2) {
@@ -171,9 +180,11 @@ function enter() {
     enterSvg(nespressoBackground);
 
     removeLeave();
-    for (let i = 6; i < 9; i++) {
-      removeDetails(i);
-    }
+    removeDetails();
+
+    // for (let i = 6; i < 9; i++) {
+    //   removeDetails(i);
+    // }
   }
 }
 
@@ -197,12 +208,12 @@ function removeLeave() {
   countNumber[index].classList.remove("leave");
 }
 
-function addDetails(i) {
-  detailsContent[i].classList.add("leave");
+function addDetails() {
+  details[index].classList.add("leave");
 }
 
-function removeDetails(i) {
-  detailsContent[i].classList.remove("leave");
+function removeDetails() {
+  details[index].classList.remove("leave");
 }
 
 // Event listener projects click
