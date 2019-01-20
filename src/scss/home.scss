@@ -157,7 +157,7 @@ a {
   margin-right: 5vw;
 
   @include large {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -210,6 +210,9 @@ a {
   align-items: center;
   font-size: 35px;
   transition: height 1s; //transform du height ici, pas opti ?
+  @include large {
+    font-size: 60px;
+  }
 }
 
 .header--menu.isClicked {
@@ -226,6 +229,10 @@ a {
   align-items: center;
   margin: 10px;
   color: white;
+  @include large {
+    width: 440px;
+    height: auto;
+  }
 }
 
 .menu__wikipedia--background {
@@ -257,6 +264,10 @@ a {
   justify-content: center;
   align-items: center; //repet dplsay flex
   transform: translateY(-4vh);
+
+  @include large {
+  transform: translateY(0);
+  }
 }
 
 .project__visual {
@@ -459,6 +470,11 @@ a {
   transition: width 1s, height 1s, top 1s;
   background: #3c6dbf;
   position: absolute;
+  @include large {
+    width: 440px;
+    height: 78px;
+    top: 63vh;
+  }
 }
 
 .project--moschino .project__title--backgroundCopy {
@@ -474,6 +490,9 @@ a {
   height: 120px;
   top: 23px;
   opacity: 1;
+  @include large {
+    top: 39px;
+  }
 }
 
 .project__title--nameCopy {
@@ -654,4 +673,15 @@ a {
 
 .project--nespresso .arrow1 {
   stroke: black;
+}
+
+.project__scroll {
+  display: none;
+  @include large {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    text-align: center;
+    width: 100vw;
+  }
 }
