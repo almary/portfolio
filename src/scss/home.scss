@@ -108,6 +108,13 @@
   }
 }
 
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -125,11 +132,11 @@ a {
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 .header {
@@ -254,6 +261,30 @@ a {
 
 .menu__nespresso--background {
   background: #000000;
+}
+
+.whiteSlide {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(120px);
+  opacity: 0;
+  z-index: 0;
+  background: white;
+  transition: opacity 1s;
+  @include large {
+    transform: translateY(155px);
+  }
+}
+
+.whiteSlide.isClicked {
+  opacity: 1;
+  z-index: 1;
+}
+
+.whiteSlide.isClicked.fadeOut {
+ animation: fadeOut 1s forwards;
 }
 
 .home {
@@ -720,4 +751,9 @@ a {
     text-align: center;
     width: 100vw;
   }
+}
+
+.project__scroll--gif {
+  width: 15px;
+  margin-top: 7px;
 }

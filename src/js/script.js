@@ -23,6 +23,7 @@ var projectClickNespresso = document.getElementById("projectClickNespresso");
 var backgroundCopy = document.querySelectorAll(".project__title--backgroundCopy");
 var nameCopy = document.querySelectorAll(".project__title--nameCopy");
 var backgrounds = document.querySelectorAll('.project__title--background');
+var whiteSlide = document.querySelector(".whiteSlide");
 
 // Slider
 
@@ -48,7 +49,6 @@ function addListener() {
 
 function wheelDetection(event) {
   var y = event.deltaY;
-  console.log(event.deltaY);
   if (event.deltaY > 50) {
     console.log("scroll down");
     next();
@@ -61,7 +61,6 @@ function wheelDetection(event) {
 
 function wheelDetectionFirefox(event) {
   var y = event.detail;
-  console.log(event.detail);
   if (event.detail > 2) {
     console.log("scroll down");
     next();
@@ -269,5 +268,6 @@ function transition() {
     backgroundCopy[i].classList.add("isClicked");
     nameCopy[i].classList.add("isClicked");
     backgrounds[i].classList.add("isClicked");
+    whiteSlide.classList.add("isClicked");
   }
 }
