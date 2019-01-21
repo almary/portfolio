@@ -39,16 +39,34 @@ function addListener() {
   }
 
   //Scroll
+  if (navigator.userAgent.toLowerCase().indexOf('firefox') === -1) {
   window.addEventListener("wheel", wheelDetection);
+  } else {
+  window.addEventListener("DOMMouseScroll", wheelDetectionFirefox);
+  }
 }
 
 function wheelDetection(event) {
   var y = event.deltaY;
+  console.log(event.deltaY);
   if (event.deltaY > 50) {
     console.log("scroll down");
     next();
   }
   if (event.deltaY < -50) {
+    console.log("scroll up");
+    back();
+  }
+}
+
+function wheelDetectionFirefox(event) {
+  var y = event.detail;
+  console.log(event.detail);
+  if (event.detail > 2) {
+    console.log("scroll down");
+    next();
+  }
+  if (event.detail < -2) {
     console.log("scroll up");
     back();
   }
@@ -66,6 +84,7 @@ function removeListener() {
 
   // Scroll
   window.removeEventListener("wheel", wheelDetection);
+  window.removeEventListener("DOMMouseScroll", wheelDetectionFirefox);
 }
 
 
