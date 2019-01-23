@@ -1,21 +1,23 @@
 .cursor {
   pointer-events: none;
-  // border-radius: 50%;
-  // mix-blend-mode: difference;
-  // background: grey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.cursor__circle {
-  stroke: #333333;
-  stroke-width: 3;
-  fill: white;
+  z-index: 3;
+  border: #333333 2px solid;
+  border-radius: 100%;
+  background: white;
   mix-blend-mode: difference;
+  width: 40px;
+  height: 40px;
 }
 
+// .cursor__svg {
+//   width: 100px;
+//   height: 75px;
+// }
+
+// .cursor__circle {
+//   stroke: #333333;
+//   stroke-width: 3;
+//   fill: white;
+  // mix-blend-mode: difference;
+// }

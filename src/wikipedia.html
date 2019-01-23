@@ -19,90 +19,99 @@
     />
     <script src="js/libs/rellax.min.js"></script>
     <script defer src="js/menu.js"></script>
+    <script defer src="js/cursor.js"></script>
     <script defer src="js/scrollWiki.js"></script>
   </head>
 
   <body>
-    <header class="header header--wikipedia">
-      <a href="index.html" class="header--logo">
-        <?xml version="1.0" encoding="utf-8"?>
-        <svg
-          class="header--logoSvg"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 20 21"
-          style="enable-background:new 0 0 20 21;"
-          xml:space="preserve"
-        >
-          <path
-            d="M14.4,1.5v1.7C13.2,1.8,11.4,1,8.9,1c-4.8,0-8.8,4.3-8.8,9.8s4,9.8,8.8,9.8c2.5,0,4.3-0.9,5.5-2.3V20H20V1.5H14.4z M10,15.3
+    <div class="background">
+      <div class="cursor" id="cursor">
+        <!-- <svg><circle class="cursor__circle" cx="50" cy="50" r="20" /></svg> -->
+      </div>
+      <header class="header header--wikipedia">
+        <a href="index.html" class="header--logo">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg
+            class="header--logoSvg"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 20 21"
+            style="enable-background:new 0 0 20 21;"
+            xml:space="preserve"
+          >
+            <path
+              d="M14.4,1.5v1.7C13.2,1.8,11.4,1,8.9,1c-4.8,0-8.8,4.3-8.8,9.8s4,9.8,8.8,9.8c2.5,0,4.3-0.9,5.5-2.3V20H20V1.5H14.4z M10,15.3
                     c-2.6,0-4.4-1.7-4.4-4.5S7.5,6.2,10,6.2c2.6,0,4.4,1.7,4.4,4.5S12.6,15.3,10,15.3z"
-          />
-        </svg>
-      </a>
-      <div class="headerWrapper">
-        <a href="#" class="header--works" id="headerWorks">
-          <div class="header--worksMover" id="headerWorksMover">
-            <div>all projects</div>
-            <div>close</div>
-          </div></a
-        >
-        <a href="#" class="header--about">about</a>
-      </div>
-      <div class="header--menu" id="headerMenu">
-        <!-- <div class="menu__title">all works</div> -->
-        <div class="menu__wikipedia">
-          <a href="wikipedia.html">
-            <div class="menu__wikipedia menu__wikipedia--background">
-              <div class="menu__wikipedia menu__wikipedia--name">WIKIPEDIA</div>
-            </div>
-          </a>
+            />
+          </svg>
+        </a>
+        <div class="headerWrapper">
+          <a href="#" class="header--works" id="headerWorks">
+            <div class="header--worksMover" id="headerWorksMover">
+              <div>all projects</div>
+              <div>close</div>
+            </div></a
+          >
+          <a href="#" class="header--about">about</a>
         </div>
-        <div class="menu__moschino">
-          <a href="moschino.html">
-            <div class="menu__moschino menu__moschino--background">
-              <div class="menu__moschino menu__moschino--name">MOSCHINO</div>
-            </div>
-          </a>
+        <div class="header--menu" id="headerMenu">
+          <!-- <div class="menu__title">all works</div> -->
+          <div class="menu__wikipedia">
+            <a href="wikipedia.html">
+              <div class="menu__wikipedia menu__wikipedia--background">
+                <div class="menu__wikipedia menu__wikipedia--name">
+                  WIKIPEDIA
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="menu__moschino">
+            <a href="moschino.html">
+              <div class="menu__moschino menu__moschino--background">
+                <div class="menu__moschino menu__moschino--name">MOSCHINO</div>
+              </div>
+            </a>
+          </div>
+          <div class="menu__nespresso">
+            <a href="nespresso.html">
+              <div class="menu__nespresso menu__nespresso--background">
+                <div class="menu__nespresso menu__nespresso--name">
+                  NESPRESSO
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="menu__nespresso">
-          <a href="nespresso.html">
-            <div class="menu__nespresso menu__nespresso--background">
-              <div class="menu__nespresso menu__nespresso--name">NESPRESSO</div>
-            </div>
-          </a>
+      </header>
+      <div class="whiteSlide isClicked fadeOut"></div>
+      <div class="title">
+        <div class="title__background title__background--wikipedia"></div>
+        <div class="title__wikipedia">WIKIPEDIA</div>
+        <div class="wikipedia__lines">
+          <span class="wikipedia__lines--one"></span>
+          <span class="wikipedia__lines--two"></span>
+          <span class="wikipedia__lines--three"></span>
+          <span class="wikipedia__lines--four"></span>
         </div>
       </div>
-    </header>
-    <div class="whiteSlide isClicked fadeOut"></div>
-    <div class="title">
-      <div class="title__background title__background--wikipedia"></div>
-      <div class="title__wikipedia">WIKIPEDIA</div>
-      <div class="wikipedia__lines">
-        <span class="wikipedia__lines--one"></span>
-        <span class="wikipedia__lines--two"></span>
-        <span class="wikipedia__lines--three"></span>
-        <span class="wikipedia__lines--four"></span>
-      </div>
-    </div>
-    <div class="wikipedia__description">
-      <div class="rellax wikipediaSvg--project" data-rellax-speed="2">
-        <svg
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 760 504"
-          style="enable-background:new 0 0 760 504;"
-          xml:space="preserve"
-        >
-          <path
-            class="wikipediaSvg"
-            d="M75.3,97L75.3,97L75.3,97c-8.5-14.2-20-28.4-32-39.9c-12-11.6-24.6-20.6-35.2-24.7c0,0,0,0,0,0L5,31.2V17.9V4.1
+      <div class="wikipedia__description">
+        <div class="rellax wikipediaSvg--project" data-rellax-speed="2">
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 760 504"
+            style="enable-background:new 0 0 760 504;"
+            xml:space="preserve"
+          >
+            <path
+              class="wikipediaSvg"
+              d="M75.3,97L75.3,97L75.3,97c-8.5-14.2-20-28.4-32-39.9c-12-11.6-24.6-20.6-35.2-24.7c0,0,0,0,0,0L5,31.2V17.9V4.1
       h192.1v25.2c-12.5,1.6-26.3,5.5-36,12.5c-4.9,3.5-8.8,7.9-10.9,13.2c-2.1,5.3-2.4,11.5-0.3,18.7l0,0l0,0
       c24.1,53.2,47,106.8,69.9,160.5c1.7,4.1,3.5,8.2,5.2,12.2c21.2,49.6,42.3,99.2,64.3,148.5l0.4,0.9l0.5-0.9l81.5-152.5l0.1-0.2
       l-0.1-0.2c-13.2-27-24.8-54.1-36.5-81.1c-2.3-5.3-4.6-10.7-6.9-16c-14-32.4-28.4-64.6-45.7-96.3l0,0l0,0c-5.7-9.3-16.3-14-28.1-16.5
@@ -113,21 +122,21 @@
       L656,62.8l0.1-0.2l-0.1-0.2c-9.3-21-30.3-28.5-50.8-33.2v-25h150.3v25.5c-6.7,1.1-13.1,3.2-19.3,5.9l0,0
       c-12,5.6-23.3,16.6-30.9,30.2l0,0l0,0L515.9,501.5h-31l-90-211.9l-0.4-1l-0.5,0.9l-109.2,212l-32.2,0
       c-29-60.4-54.3-122.3-79.7-184.2c-2.5-6.2-5.1-12.3-7.6-18.5C137.4,230.7,109,162.8,75.3,97z"
-          />
-        </svg>
-        <svg
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 286 191"
-          style="enable-background:new 0 0 286 191;"
-          xml:space="preserve"
-          class="wikipediaBackground move"
-        >
-          <path
-            d="M29,36.9L29,36.9L29,36.9c-3.2-5.4-7.5-10.8-12.1-15.2c-4.5-4.4-9.3-7.8-13.3-9.4c0,0,0,0,0,0l-1-0.4V7.1V2.2
+            />
+          </svg>
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 286 191"
+            style="enable-background:new 0 0 286 191;"
+            xml:space="preserve"
+            class="wikipediaBackground move"
+          >
+            <path
+              d="M29,36.9L29,36.9L29,36.9c-3.2-5.4-7.5-10.8-12.1-15.2c-4.5-4.4-9.3-7.8-13.3-9.4c0,0,0,0,0,0l-1-0.4V7.1V2.2
 	h71.4v9c-4.7,0.6-9.8,2.1-13.4,4.7c-1.9,1.4-3.4,3.1-4.2,5.1c-0.8,2.1-0.9,4.5-0.1,7.2l0,0l0,0C65.4,48.5,74,68.7,82.6,89
 	c0.7,1.5,1.3,3.1,2,4.6c7.9,18.7,15.9,37.5,24.1,56.1l0.4,0.9l0.5-0.9l30.6-57.6l0.1-0.2l-0.1-0.2c-4.9-10.2-9.3-20.4-13.7-30.6
 	c-0.9-2-1.7-4-2.6-6.1c-5.3-12.2-10.7-24.4-17.1-36.4l0,0l0,0c-2.2-3.6-6.3-5.4-10.7-6.4c-4.2-0.9-8.9-1.1-12.8-1.2
@@ -138,94 +147,94 @@
 	c-3.5-8-11.4-10.9-19-12.7V2.2h55.8v9.1c-2.4,0.4-4.8,1.2-7,2.2l0,0c-4.6,2.1-8.9,6.4-11.7,11.5l0,0l0,0l-70.9,164.4h-11.2
 	l-33.7-79.9l-0.4-1l-0.5,0.9l-40.9,79.9l-11.7,0c-10.8-22.8-20.3-46.1-29.8-69.4c-0.9-2.3-1.9-4.7-2.8-7
 	C52.2,87.4,41.6,61.7,29,36.9z"
-          />
-        </svg>
-      </div>
-      <div class="description__text text">
-        For a school project, I had to redesign a wikipedia article page. The
-        goal was to make the content more enjoyable to read.
-      </div>
-    </div>
-    <div class="wikipedia__description">
-      <div class="description__wrapper">
-        <div class=" description__text text" >
-          First of all, I had to study the actual website. <br />
-          What can be improved?
-        </div>
-        <div class=" description__text text" >
-          There was 4 sections. Each of them contains useful features. <br />
-          Let’s sort it out.
-        </div>
-      </div>
-      <video
-        autoplay
-        loop
-        muted
-        src="assets/wikipedia-video.webm"
-        class="rellax description__video"
-        data-rellax-speed="2"
-      ></video>
-    </div>
-    <div class="wikipedia__description">
-      <img
-        src="assets/wikipedia-screen-font.png"
-        alt="font illustration"
-        class="rellax description__image"
-        data-rellax-speed="1.5"
-      />
-      <div class="description__wrapper">
-        <div class="description__text text">
-          The main focus was the typography and all the parameters that come
-          with it.
+            />
+          </svg>
         </div>
         <div class="description__text text">
-          First, the font. <br />
-          Serif, for the reading. <br />
-          Sans-serif for all others readable texts.
+          For a school project, I had to redesign a wikipedia article page. The
+          goal was to make the content more enjoyable to read.
         </div>
       </div>
-    </div>
-    <div class="wikipedia__description">
-      <div class="description__wrapper">
-        <div class="description__text text">
-          For an optimal reading on screen, we need between 50 and 100 character
-          per lines. <br />
-          <br />
+      <div class="wikipedia__description">
+        <div class="description__wrapper">
+          <div class=" description__text text">
+            First of all, I had to study the actual website. <br />
+            What can be improved?
+          </div>
+          <div class=" description__text text">
+            There was 4 sections. Each of them contains useful features. <br />
+            Let’s sort it out.
+          </div>
+        </div>
+        <video
+          autoplay
+          loop
+          muted
+          src="assets/wikipedia-video.webm"
+          class="rellax description__video"
+          data-rellax-speed="2"
+        ></video>
+      </div>
+      <div class="wikipedia__description">
+        <img
+          src="assets/wikipedia-screen-font.png"
+          alt="font illustration"
+          class="rellax description__image"
+          data-rellax-speed="1.5"
+        />
+        <div class="description__wrapper">
+          <div class="description__text text">
+            The main focus was the typography and all the parameters that come
+            with it.
+          </div>
+          <div class="description__text text">
+            First, the font. <br />
+            Serif, for the reading. <br />
+            Sans-serif for all others readable texts.
+          </div>
+        </div>
+      </div>
+      <div class="wikipedia__description">
+        <div class="description__wrapper">
+          <div class="description__text text">
+            For an optimal reading on screen, we need between 50 and 100
+            character per lines. <br />
+            <br />
 
-          So, with the Merryweather font at 16 px, a width of 600px is almost
-          perfect. <br />
-          <br />
-          A line now contains on average 75 characters.
+            So, with the Merryweather font at 16 px, a width of 600px is almost
+            perfect. <br />
+            <br />
+            A line now contains on average 75 characters.
+          </div>
         </div>
+        <img
+          src="assets/wikipedia-screen-parameters.jpg"
+          alt="parameters illustration"
+          class="rellax description__image"
+          data-rellax-speed="1"
+        />
       </div>
-      <img
-        src="assets/wikipedia-screen-parameters.jpg"
-        alt="parameters illustration"
-        class="rellax description__image"
-        data-rellax-speed="1"
-      />
-    </div>
-    <div class="wikipedia__description wikipedia__description--column">
-      <div class="description__wrapper">
-        <div class="description__text text">
-          We reorganize the sections, and here we go.
+      <div class="wikipedia__description wikipedia__description--column">
+        <div class="description__wrapper">
+          <div class="description__text text">
+            We reorganize the sections, and here we go.
+          </div>
         </div>
+        <img
+          src="assets/wikipedia-screen1.png"
+          alt="redesign screenshot"
+          class="description__image description__image--large"
+        />
+        <div class="description__wrapper">
+          <div class="description__text text text--center">...</div>
+        </div>
+        <img
+          src="assets/wikipedia-screen2.png"
+          alt="redesign screenshot"
+          class="description__image description__image--large"
+        />
       </div>
-      <img
-        src="assets/wikipedia-screen1.png"
-        alt="redesign screenshot"
-        class="description__image description__image--large"
-      />
-      <div class="description__wrapper">
-        <div class="description__text text text--center">...</div>
-      </div>
-      <img
-        src="assets/wikipedia-screen2.png"
-        alt="redesign screenshot"
-        class="description__image description__image--large"
-      />
-    </div>
-    <!-- <div class="wikipedia__illustration">
+      <!-- <div class="wikipedia__illustration">
       <img
         src="assets/wikipedia-screen1.png"
         alt="wikipedia redesign screenshot"
@@ -249,16 +258,17 @@
         class="wikipedia__illustration wikipedia__illustration--four"
       ></video>
     </div> -->
-    <!-- <a href="moschino.html">
+      <!-- <a href="moschino.html">
       <div class="footer"><p>next project</p></div>
     </a> -->
 
-    <!-- <div class="wikipedia__illustration"></div>
+      <!-- <div class="wikipedia__illustration"></div>
     <div class="wikipedia__illustration"></div> -->
-    <!-- <div class="animation">
+      <!-- <div class="animation">
       <div class="animation__hide"></div>
       <div class="animation__one"></div>
       <div class="animation__two"></div>
     </div> -->
+    </div>
   </body>
 </html>
