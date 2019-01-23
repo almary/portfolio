@@ -283,12 +283,12 @@ a {
   z-index: 1;
   transform: translateY(120px);
   @include large {
-  transform: translateY(155px);
+    transform: translateY(155px);
   }
 }
 
 .whiteSlide.isClicked.fadeOut {
- animation: fadeOut 1s forwards;
+  animation: fadeOut 1s forwards;
 }
 
 .home {
@@ -752,6 +752,7 @@ a {
   @include large {
     display: block;
     position: fixed;
+    z-index: 1;
     bottom: 30px;
     text-align: center;
     width: 100vw;
