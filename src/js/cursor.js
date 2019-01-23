@@ -14,7 +14,6 @@ function mouseMove(e) {
 }
 
 // Click animation
-
 document.addEventListener("click", mouseClick);
 
 function mouseClick() {
@@ -25,7 +24,6 @@ function mouseClick() {
 }
 
 // Hover animation
-
 for (let i = 0; i < links.length; i++) {
   links[i].addEventListener("mouseover", function() {
     cursor.classList.add("hover");

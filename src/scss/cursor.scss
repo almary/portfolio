@@ -24,3 +24,7 @@
 .cursor.hover {
   transform: scale(1.8);
 }
+
+.cursor.isClicked.hover {
+  transform: scale(0.9);
+}
