@@ -1,3 +1,7 @@
+* {
+  cursor: none;
+}
+
 .cursor {
   pointer-events: none;
   position: absolute;
@@ -8,16 +12,13 @@
   mix-blend-mode: difference;
   width: 40px;
   height: 40px;
+  transition: transform 0.3s;
 }
 
-// .cursor__svg {
-//   width: 100px;
-//   height: 75px;
-// }
+.cursor.isClicked {
+  transform: scale(0.7);
+}
 
-// .cursor__circle {
-//   stroke: #333333;
-//   stroke-width: 3;
-//   fill: white;
-  // mix-blend-mode: difference;
-// }
+.cursor.hover {
+  transform: scale(1.8);
+}
