@@ -237,7 +237,7 @@ function removeDetails() {
 // Event listener projects click
 //wikipedia
 projectClickWikiepdia.addEventListener("click", function(){
-  delayUrlLoad("#", speed);   
+  delayUrlLoad("wikipedia.html", speed);   
   transition();
 });
 

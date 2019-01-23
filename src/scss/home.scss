@@ -268,20 +268,23 @@ a {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  transform: translateY(120px);
+  transform: translateY(400px);
   opacity: 0;
   z-index: 0;
   background: white;
   transition: opacity 1s, transform 1s;
   @include large {
-    transform: translateY(2000px);
+    transform: translateY(1000px);
   }
 }
 
 .whiteSlide.isClicked {
   opacity: 1;
-  z-index: 1;    
+  z-index: 1;
+  transform: translateY(120px);
+  @include large {
   transform: translateY(155px);
+  }
 }
 
 .whiteSlide.isClicked.fadeOut {
@@ -293,10 +296,6 @@ a {
   height: 100vh;
   overflow: hidden;
 }
-
-// .home.fadeOut {
-//    animation: fadeOut 1s forwards;
-// }
 
 .home__project {
   overflow: hidden;
