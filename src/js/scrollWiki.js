@@ -5,3 +5,7 @@ window.onscroll = () => {
   else navWiki.className = "header header--wikipedia isScrolled";
 };
 //
+
+// Parallax init
+let Rellax = require('rellax');
+let rellax = new Rellax('.rellax');

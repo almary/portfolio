@@ -1,0 +1,21 @@
+.cursor {
+  pointer-events: none;
+  // border-radius: 50%;
+  // mix-blend-mode: difference;
+  // background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.cursor__circle {
+  stroke: #333333;
+  stroke-width: 3;
+  fill: white;
+  mix-blend-mode: difference;
+}
+

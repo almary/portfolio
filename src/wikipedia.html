@@ -17,14 +17,7 @@
       media="screen"
       href="scss/styles.scss"
     />
-    <!-- <script defer src="js/libs/rellax.min.js">  var rellax = new Rellax('.rellax', {
-        speed: -2,
-        center: false,
-        wrapper: null,
-        round: true,
-        vertical: true,
-        horizontal: false
-      });</script> -->
+    <script src="js/libs/rellax.min.js"></script>
     <script defer src="js/menu.js"></script>
     <script defer src="js/scrollWiki.js"></script>
   </head>
@@ -96,7 +89,7 @@
       </div>
     </div>
     <div class="wikipedia__description">
-      <div class=" wikipediaSvg--project">
+      <div class="rellax wikipediaSvg--project" data-rellax-speed="2">
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -155,11 +148,11 @@
     </div>
     <div class="wikipedia__description">
       <div class="description__wrapper">
-        <div class="description__text text">
+        <div class=" description__text text" >
           First of all, I had to study the actual website. <br />
           What can be improved?
         </div>
-        <div class="description__text text">
+        <div class=" description__text text" >
           There was 4 sections. Each of them contains useful features. <br />
           Let’s sort it out.
         </div>
@@ -169,14 +162,16 @@
         loop
         muted
         src="assets/wikipedia-video.webm"
-        class="description__video"
+        class="rellax description__video"
+        data-rellax-speed="2"
       ></video>
     </div>
     <div class="wikipedia__description">
       <img
         src="assets/wikipedia-screen-font.png"
         alt="font illustration"
-        class="description__image"
+        class="rellax description__image"
+        data-rellax-speed="1.5"
       />
       <div class="description__wrapper">
         <div class="description__text text">
@@ -206,7 +201,8 @@
       <img
         src="assets/wikipedia-screen-parameters.jpg"
         alt="parameters illustration"
-        class="description__image"
+        class="rellax description__image"
+        data-rellax-speed="1"
       />
     </div>
     <div class="wikipedia__description wikipedia__description--column">
