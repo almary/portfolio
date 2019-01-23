@@ -48,7 +48,7 @@ function addListener() {
 }
 
 function wheelDetection(event) {
-  var y = event.deltaY;
+  console.log(event.deltaY);
   if (event.deltaY > 50) {
     console.log("scroll down");
     next();
