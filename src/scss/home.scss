@@ -261,7 +261,6 @@ em {
   top: 0;
   height: 0vh;
   width: 100vw;
-  background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -287,9 +286,35 @@ em {
   width: 0vw;
   height: 0vh;
   background: #222222;
-  top: 40px;
-  right: 5vw;
+  top: 0;
+  right: 0;
   transition: width 0.7s, height 0.7s, right 0.7s, top 0.7s;
+  @include large {
+    top: 40px;
+    right: 5vw;
+  }
+}
+
+.header__about.isClicked {
+  width: 100vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+.header__about--close {
+  opacity: 0;
+  z-index: -1;
+  color: white;
+  position: absolute;
+  right: 5vw;
+  top: 13px;
+  transition: opacity 1s;
+}
+
+.header__about--close.isClicked {
+  z-index: 1;
+  opacity: 1;
 }
 
 .header__about--wrapper {
@@ -301,17 +326,9 @@ em {
   justify-content: space-around;
 }
 
-.header__about.isClicked {
-  width: 100vw;
-  height: 100vh;
-  right: 0;
-  top: 0;
-  z-index: 3;
-}
-
 .header__about--svg {
   width: 280px;
-  margin-top: 10vh;
+  margin-top: 7vh;
   margin-bottom: -20px;
 }
 
@@ -332,6 +349,11 @@ em {
   stroke-miterlimit: 10;
 }
 
+.header__about--description {
+  width: 90vw;
+  font-size: 14px;
+}
+
 // .header__about--meCopy {
 //   position: absolute;
 //   color: #393939;
@@ -346,6 +368,20 @@ em {
   color: white;
   font-weight: 300;
   line-height: 130%;
+}
+
+.header__about--links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40px;
+  transform: translateY(8px);
+}
+
+.header__about--links a {
+  font-weight: 800;
+  display: inline;
+  width: 100px;
 }
 
 .menu__wikipedia--background,
