@@ -207,11 +207,6 @@ a {
   }
 }
 
-// .menu__title {
-//   color: black;
-//   transform: translateY(-10vh);
-// }
-
 .header--menu {
   z-index: -1;
   overflow: hidden;
@@ -227,12 +222,18 @@ a {
   font-size: 35px;
   transition: height 1s; //transform du height ici, pas opti ?
   @include large {
-    font-size: 60px;
+    // font-size: 60px;
+    width: 250px;
+    right: 11vw;
+    top: 60px;
   }
 }
 
 .header--menu.isClicked {
   height: 100vh;
+  @include large {
+   height: 200px;
+  }
 }
 
 .menu__wikipedia--background,
