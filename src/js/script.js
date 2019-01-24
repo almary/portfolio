@@ -15,8 +15,6 @@ var countNumber = document.querySelectorAll(".project__count--number");
 var wikipediaBackground = document.querySelector(".wikipediaBackground");
 var bearBackground = document.querySelector(".bearBackground");
 var nespressoBackground = document.querySelector(".nespressoBackground");
-var aboutButton = document.getElementById("headerAboutButton");
-var about = document.getElementById("headerAbout");
 
 var projectClickWikiepdia = document.getElementById("projectClickWikipedia");
 var projectClickMoschino = document.getElementById("projectClickMoschino");
@@ -273,10 +271,3 @@ function transition() {
     whiteSlide.classList.add("isClicked");
   }
 }
-
-
-// Click about
-closeAbout.addEventListener("click", function(){
-  about.classList.toggle("isClicked");
-  closeAbout.classList.toggle("isClicked");
-});
