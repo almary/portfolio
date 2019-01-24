@@ -116,44 +116,45 @@
 }
 
 @keyframes noise {
-  0%, 100% {
-      background-position: 0 0;
+  0%,
+  100% {
+    background-position: 0 0;
   }
 
   10% {
-      background-position: -5% -10%;
+    background-position: -5% -10%;
   }
 
   20% {
-      background-position: -15% 5%;
+    background-position: -15% 5%;
   }
 
   30% {
-      background-position: 7% -25%;
+    background-position: 7% -25%;
   }
 
   40% {
-      background-position: 20% 25%;
+    background-position: 20% 25%;
   }
 
   50% {
-      background-position: -25% 10%;
+    background-position: -25% 10%;
   }
 
   60% {
-      background-position: 15% 5%;
+    background-position: 15% 5%;
   }
 
   70% {
-      background-position: 0% 15%;
+    background-position: 0% 15%;
   }
 
   80% {
-      background-position: 25% 35%;
+    background-position: 25% 35%;
   }
 
   90% {
-      background-position: -10% 10%;
+    background-position: -10% 10%;
   }
 }
 
@@ -170,6 +171,10 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+em {
+  font-weight: 800;
 }
 
 .noselect {
@@ -277,6 +282,72 @@ a {
   }
 }
 
+.header__about {
+  position: fixed;
+  width: 0vw;
+  height: 0vh;
+  background: #222222;
+  top: 40px;
+  right: 5vw;
+  transition: width 0.7s, height 0.7s, right 0.7s, top 0.7s;
+}
+
+.header__about--wrapper {
+  // position: relative;
+  height: 70vh;
+  margin: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header__about.isClicked {
+  width: 100vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.header__about--svg {
+  width: 280px;
+  margin-top: 10vh;
+  margin-bottom: -20px;
+}
+
+.header__about--about {
+  fill: #ffffff;
+}
+.header__about--about,
+.header__about--me,
+.header__about--meCopy {
+  font-family: "Gilroy";
+  font-size: 60px;
+}
+
+.header__about--me {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 0.75;
+  stroke-miterlimit: 10;
+}
+
+// .header__about--meCopy {
+//   position: absolute;
+//   color: #393939;
+//   top: 12vh;
+//   left:200px;
+//   z-index: -1;
+// }
+
+.header__about--description,
+.header__about--contact,
+.header__about--links a {
+  color: white;
+  font-weight: 300;
+  line-height: 130%;
+}
+
 .menu__wikipedia--background,
 .menu__moschino--background,
 .menu__nespresso--background {
@@ -342,17 +413,19 @@ a {
 .home__project {
   overflow: hidden;
   background: white;
-  &::before {
-    content: "";
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../assets/noise.png");
-    animation: 1s infinite noise;
-    pointer-events: none;
+  @include large {
+    &::before {
+      content: "";
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../assets/noise.png");
+      animation: 1s infinite noise;
+      pointer-events: none;
+    }
   }
 }
 
