@@ -305,16 +305,26 @@ em {
 .header__about--close {
   opacity: 0;
   z-index: -1;
-  color: white;
   position: absolute;
   right: 5vw;
   top: 13px;
   transition: opacity 1s;
+  @include large {
+    width: 60px;
+    position: fixed;
+    font-size: 20px;
+    top: 35px;
+    right: 5vw;
+  }
 }
 
 .header__about--close.isClicked {
   z-index: 1;
   opacity: 1;
+}
+
+.header__about--closeText {
+  color: white;
 }
 
 .header__about--wrapper {
@@ -330,6 +340,9 @@ em {
   width: 280px;
   margin-top: 7vh;
   margin-bottom: -20px;
+  @include large {
+    width: 600px;
+  }
 }
 
 .header__about--about {
@@ -352,6 +365,9 @@ em {
 .header__about--description {
   width: 90vw;
   font-size: 14px;
+  @include large {
+    font-size: 16px;
+  }
 }
 
 // .header__about--meCopy {
@@ -370,12 +386,22 @@ em {
   line-height: 130%;
 }
 
+.header__about--contact {
+  @include large {
+    font-size: 24px;
+  }
+}
+
 .header__about--links {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 40px;
   transform: translateY(8px);
+  @include large {
+    font-size: 22px;
+    height: 80px;
+  }
 }
 
 .header__about--links a {
@@ -915,7 +941,6 @@ em {
   @include large {
     display: block;
     position: fixed;
-    z-index: 1;
     bottom: 30px;
     text-align: center;
     width: 100vw;
