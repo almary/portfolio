@@ -129,7 +129,7 @@ function leave() {
   removeListener();
 
   if (index === 0) {
-    leaveSvg(wikipediaSvg);
+    // leaveSvg(wikipediaSvg);
     leaveSvg(wikipediaBackground);
 
     addLeave();
@@ -154,7 +154,7 @@ function leave() {
   }
 
   if (index === 2) {
-    leaveSvg(nespressoSvg);
+    // leaveSvg(nespressoSvg);
     leaveSvg(nespressoBackground);
 
     addLeave();
@@ -168,7 +168,7 @@ function leave() {
 
 function enter() {
   if (index === 0) {
-    enterSvg(wikipediaSvg);
+    // enterSvg(wikipediaSvg);
     enterSvg(wikipediaBackground);
 
     removeLeave();

@@ -267,7 +267,9 @@ em {
   align-items: center;
   font-size: 35px;
   transition: height 1s; //transform du height ici, pas opti ?
+  background: white;
   @include large {
+    background: none;
     width: 250px;
     right: 11vw;
     top: 60px;
@@ -292,6 +294,7 @@ em {
   @include large {
     top: 40px;
     right: 5vw;
+    overflow: hidden;
   }
 }
 
