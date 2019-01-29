@@ -5,7 +5,8 @@ var translateMover = 0;
 var arrowRight = document.querySelectorAll(".project__arrow--right");
 var arrowLeft = document.querySelectorAll(".project__arrow--left");
 var mover = document.getElementById("mover");
-var wikipediaSvg = document.getElementById("wikipediaSvg");
+// var wikipediaSvg = document.getElementById("wikipediaSvg");
+var wikipediaSvg = document.querySelector(".wikipediaSvg");
 var bearMouth = document.getElementById("bear--mouth");
 var bearHead = document.getElementById("bear--head");
 var nespressoSvg = document.getElementById("nespressoSvg");
@@ -129,7 +130,7 @@ function leave() {
   removeListener();
 
   if (index === 0) {
-    // leaveSvg(wikipediaSvg);
+    leaveSvg(wikipediaSvg);
     leaveSvg(wikipediaBackground);
 
     addLeave();
@@ -154,7 +155,7 @@ function leave() {
   }
 
   if (index === 2) {
-    // leaveSvg(nespressoSvg);
+    leaveSvg(nespressoSvg);
     leaveSvg(nespressoBackground);
 
     addLeave();
@@ -168,7 +169,7 @@ function leave() {
 
 function enter() {
   if (index === 0) {
-    // enterSvg(wikipediaSvg);
+    enterSvg(wikipediaSvg);
     enterSvg(wikipediaBackground);
 
     removeLeave();
