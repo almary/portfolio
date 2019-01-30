@@ -23,9 +23,11 @@ var projectClickWikiepdia = document.getElementById("projectClickWikipedia");
 var projectClickMoschino = document.getElementById("projectClickMoschino");
 var projectClickNespresso = document.getElementById("projectClickNespresso");
 
-var backgroundCopy = document.querySelectorAll(".project__title--backgroundCopy");
+var backgroundCopy = document.querySelectorAll(
+  ".project__title--backgroundCopy"
+);
 var nameCopy = document.querySelectorAll(".project__title--nameCopy");
-var backgrounds = document.querySelectorAll('.project__title--background');
+var backgrounds = document.querySelectorAll(".project__title--background");
 var whiteSlide = document.querySelector(".whiteSlide");
 
 // Slider
@@ -43,10 +45,12 @@ function addListener() {
   }
 
   //Scroll
-  if (navigator.userAgent.toLowerCase().indexOf('firefox') === -1) {
-  window.addEventListener("wheel", wheelDetection);
+  if (navigator.userAgent.toLowerCase().indexOf("firefox") === -1) {
+    window.addEventListener("wheel", wheelDetection, { passive: true });
   } else {
-  window.addEventListener("DOMMouseScroll", wheelDetectionFirefox);
+    window.addEventListener("DOMMouseScroll", wheelDetectionFirefox, {
+      passive: true
+    });
   }
 }
 
@@ -74,7 +78,6 @@ function wheelDetectionFirefox(event) {
   }
 }
 
-
 function removeListener() {
   console.log("remove");
   for (let i = 0; i < arrowRight.length; i++) {
@@ -88,7 +91,6 @@ function removeListener() {
   window.removeEventListener("wheel", wheelDetection);
   window.removeEventListener("DOMMouseScroll", wheelDetectionFirefox);
 }
-
 
 function next() {
   leave();
@@ -161,7 +163,7 @@ function leave() {
     leaveSvg(nespressoBackground);
 
     addLeave();
-      addDetails();
+    addDetails();
 
     // for (let i = 6; i < 9; i++) {
     //   addDetails(i);
@@ -176,7 +178,6 @@ function enter() {
 
     removeLeave();
     removeDetails();
-
 
     // for (let i = 0; i < 3; i++) {
     //   removeDetails(i);
@@ -239,19 +240,19 @@ function removeDetails() {
 
 // Event listener projects click
 //wikipedia
-projectClickWikiepdia.addEventListener("click", function(){
+projectClickWikiepdia.addEventListener("click", function() {
   delayUrlLoad("wikipedia.html", speed);
   transition();
 });
 
 //moschino
-projectClickMoschino.addEventListener("click", function(){
+projectClickMoschino.addEventListener("click", function() {
   delayUrlLoad("moschino.html", speed);
   transition();
 });
 
 //nespresso
-projectClickNespresso.addEventListener("click", function(){
+projectClickNespresso.addEventListener("click", function() {
   delayUrlLoad("nespresso.html", speed);
   transition();
 });

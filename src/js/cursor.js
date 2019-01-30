@@ -1,6 +1,7 @@
 var cursor = document.getElementById("cursor");
 var lastPosition = 0;
 var links = document.querySelectorAll("a");
+var position;
 
 window.addEventListener("scroll", scrollUpdate);
 
