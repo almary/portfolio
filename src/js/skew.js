@@ -5,12 +5,11 @@ let currentPixel = window.pageYOffset;
 
 const looper = function() {
   const newPixel = window.pageYOffset;
-  const diff = newPixel - currentPixel;
-  var speed = diff * 0.1;
-  if (speed > 5) {
-    speed = 5;
+  var diff = newPixel - currentPixel;
+  if (diff > 30) {
+    diff = 30;
   }
-
+  var speed = diff * 0.1;
   for (let i = 0; i < images.length; i++) {
     images[i].style.transform = "skewY(" + speed + "deg)";
   }

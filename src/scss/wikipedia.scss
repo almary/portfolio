@@ -56,12 +56,11 @@
 
 .text {
   font-family: "Neue Haas Grotesk", sans-serif;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 300;
-}
-
-.text--center {
-  text-align: center;
+  @include large {
+    font-size: 17px;
+  }
 }
 
 .text::selection {
@@ -118,11 +117,14 @@
   width: 1px;
   background: #3c6dbf;
 }
-
 .wikipediaSvg--project {
-  position: relative;
-  width: 400px;
-  height: auto;
+  display: none;
+  @include large {
+    display: block;
+    width: 400px;
+    height: auto;
+    position: relative;
+  }
 }
 
 .wikipediaBackground.move {
@@ -131,17 +133,24 @@
 
 .wikipedia__description {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  width: 80vw;
-  margin: 0 auto;
-  margin-top: 80px;
-  line-height: 1.3em;
-  color: #333333;
-  // border: red 2px solid;
-  position: relative;
-  height: 30vw;
+  margin-top: 30px;
+  @include large {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 80px;
+    line-height: 1.3em;
+    color: #333333;
+    // border: red 2px solid;
+    position: relative;
+    height: 30vw;
+  }
 }
 
 .wikipedia__description:nth-child(3) {
@@ -152,12 +161,21 @@
 
 .wikipedia__description--column {
   flex-direction: column;
-  height: 110vw;
+  height: 130vw;
+  @include large {
+    height: 110vw;
+  }
 }
 
 .description__text {
-  width: 250px;
-  margin: 0 50px 0 50px;
+  max-width: 80vw;
+  text-align: center;
+  @include large {
+    text-align: left;
+    display: block;
+    width: 250px;
+    margin: 0 50px 0 50px;
+  }
 }
 
 .description__wrapper {
@@ -169,17 +187,25 @@
 }
 
 .description__video {
-  max-width: 50vw;
+  width: 90vw;
+  @include large {
+    max-width: 50vw;
+  }
 }
 
 .description__image {
-  width: 50vw;
+  width: 90vw;
   height: auto;
   box-shadow: 2px 2px 50px #f0f0f0;
+  @include large {
+    width: 50vw;
+  }
 }
 
 .description__image--large {
-  width: 70vw;
+  @include large {
+    width: 70vw;
+  }
 }
 
 // .wikipedia__illustration {
