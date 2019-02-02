@@ -6,6 +6,6 @@ window.onscroll = () => {
 };
 //
 
-// Parallax init
-let Rellax = require('rellax');
-let rellax = new Rellax('.rellax');
+// // Parallax init
+// let Rellax = require('rellax');
+// let rellax = new Rellax('.rellax');

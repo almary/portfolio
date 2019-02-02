@@ -12,18 +12,6 @@
 
 .background {
   background: white;
-  &::before {
-    content: "";
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../assets/noise.png");
-    animation: 1s infinite noise;
-    pointer-events: none;
-  }
 }
 
 .header--wikipedia .header--logoSvg {
@@ -170,11 +158,19 @@
 .description__text {
   max-width: 80vw;
   text-align: center;
+  margin: 10px 0 10px 0;
   @include large {
     text-align: left;
     display: block;
     width: 250px;
     margin: 0 50px 0 50px;
+  }
+}
+
+.description__wrapper--order {
+  order: 1;
+  @include large {
+    order: 0;
   }
 }
 
