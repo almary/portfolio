@@ -21,7 +21,7 @@
   left: 0;
   top: 0;
   background-color: #3c6dbf;
-  z-index: 2;
+  z-index: 1;
 }
 
 .header--wikipedia .header--logoSvg {
@@ -212,6 +212,49 @@
   @include large {
     width: 70vw;
   }
+}
+
+.next {
+  text-align: center;
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next--container {
+  border: #222222 2px solid;
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    background-color: #222222;
+    transform: translateX(-90%) translateY(90%) rotate(-45deg);
+    transition: transform 0.4s;
+  }
+
+  &:hover {
+    color:white;
+
+    &:before {
+      transform: translateX(0) translateY(0) rotate(-45deg);
+    }
+  }
+}
+
+.next--text {
+  z-index: 2;
 }
 
 // .wikipedia__illustration {

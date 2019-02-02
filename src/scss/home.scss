@@ -280,6 +280,7 @@ em {
 
 .header--menu.isClicked {
   height: 100vh;
+  overflow: hidden;
   @include large {
     height: 200px;
   }
