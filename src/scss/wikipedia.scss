@@ -21,7 +21,7 @@
   left: 0;
   top: 0;
   background-color: #3c6dbf;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header--wikipedia .header--logoSvg {
@@ -194,6 +194,7 @@
 
 .description__video {
   width: 90vw;
+  z-index: 1;
   @include large {
     max-width: 50vw;
   }
@@ -203,6 +204,7 @@
   width: 90vw;
   height: auto;
   box-shadow: 2px 2px 50px #f0f0f0;
+  z-index: 1;
   @include large {
     width: 50vw;
   }

@@ -46,14 +46,14 @@ for (let i = 0; i < links.length; i++) {
 
 // Deformation
 
-//pas opti
+// pas opti
 // document.addEventListener("mousemove", test);
 
 // function test(e) {
 //   valeur = Math.atan2(e.clientY - yPos, e.clientX - xPos) * (180 / Math.PI);
 //   // console.log(valeur);
 //   // transformTest = window.getComputedStyle(cursor).getPropertyValue("transform");
-//   cursor.style.transform = "rotate(" + valeur + "deg)";
+//   cursor.style.transform = "rotate(" + valeur + "deg)" + "skew(150deg)";
 //   valeurBefore = valeur;
 //   xPos = e.clientX;
 //   yPos = e.clientY;
