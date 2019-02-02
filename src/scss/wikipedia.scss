@@ -217,15 +217,19 @@
 .next {
   text-align: center;
   width: 100vw;
-  height: 200px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include large {
+    height: 200px;
+  }
 }
 
 .next--container {
   border: #222222 2px solid;
-  height: 100px;
+  height: 50px;
   width: 200px;
   display: flex;
   justify-content: center;
@@ -233,6 +237,11 @@
   z-index: 1;
   overflow: hidden;
   position: relative;
+
+  @include large {
+    height: 100px;
+    width: 200px;
+  }
 
   &:before {
     content: "";
@@ -245,7 +254,7 @@
   }
 
   &:hover {
-    color:white;
+    color: white;
 
     &:before {
       transform: translateX(0) translateY(0) rotate(-45deg);
