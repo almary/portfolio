@@ -900,13 +900,27 @@ em {
   top: 11vh;
 
   @include large {
-    display: none;
+    top: -25px;
+    justify-content: space-between;
+    height: 350px;
   }
 }
 
 .project__arrow--left,
 .project__arrow--right {
   width: 20px;
+}
+
+.project__arrow--left {
+  @include large {
+    transform: rotate(90deg);
+  }
+}
+
+.project__arrow--right {
+  @include large {
+    transform: rotate(90deg);
+  }
 }
 
 .zero {
