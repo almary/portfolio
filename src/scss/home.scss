@@ -446,7 +446,7 @@ em {
 
 .whiteSlide {
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
   transform: translateY(400px);
@@ -462,7 +462,7 @@ em {
 .whiteSlide.isClicked {
   opacity: 1;
   z-index: 1;
-  transform: translateY(21vh); //120px
+  transform: translateY(120px); //120px
   @include large {
     transform: translateY(155px);
   }
