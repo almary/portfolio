@@ -248,9 +248,11 @@ em {
 
 .header--worksMover.isClicked {
   transform: translateY(-17px);
+  color: black;
 
   @include large {
     transform: translateY(-23px);
+    color:inherit;
   }
 }
 

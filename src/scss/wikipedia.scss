@@ -14,6 +14,16 @@
   background: white;
 }
 
+.progress {
+  height: 5px;
+  width: 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #3c6dbf;
+  z-index: 2;
+}
+
 .header--wikipedia .header--logoSvg {
   display: block;
   height: 20px;
