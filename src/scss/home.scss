@@ -72,15 +72,21 @@
   }
 }
 
-@keyframes dashBearHead {
+@keyframes dashAmazonA {
   to {
-    stroke-dashoffset: 830;
+    stroke-dashoffset: 2500;
   }
 }
 
-@keyframes dashBearMouth {
+@keyframes dashAmazonLine {
   to {
-    stroke-dashoffset: 360;
+    stroke-dashoffset: 900;
+  }
+}
+
+@keyframes dashAmazonArrow {
+  to {
+    stroke-dashoffset: 1540;
   }
 }
 
@@ -90,13 +96,19 @@
   }
 }
 
-@keyframes dashBearHeadEnter {
+@keyframes dashAmazonAEnter {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-@keyframes dashBearMouthEnter {
+@keyframes dashAmazonLineEnter {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dashAmazonArrowEnter {
   to {
     stroke-dashoffset: 0;
   }
@@ -649,6 +661,51 @@ em {
   stroke: #000000;
   stroke-width: 5;
   stroke-miterlimit: 10;
+}
+
+.amazonSvg--a {
+  stroke-miterlimit: 10;
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 0;
+}
+
+.amazonSvg--a.leave {
+  animation: dashAmazonA 1s linear forwards;
+}
+
+.amazonSvg--a.enter {
+  stroke-dashoffset: 2500;
+  animation: dashAmazonAEnter 1s linear forwards;
+}
+
+.amazonSvg--line {
+  stroke-miterlimit: 10;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 0;
+}
+
+.amazonSvg--line.leave {
+  animation: dashAmazonLine 1s linear forwards;
+}
+
+.amazonSvg--line.enter {
+  stroke-dashoffset: 900;
+  animation: dashAmazonLineEnter 1s linear forwards;
+}
+
+.amazonSvg--arrow {
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1540;
+  stroke-dashoffset: 0;
+}
+
+.amazonSvg--arrow.leave {
+  animation: dashAmazonArrow 1s linear forwards;
+}
+
+.amazonSvg--arrow.enter {
+  stroke-dashoffset: 1540;
+  animation: dashAmazonArrowEnter 1s linear forwards;
 }
 
 .nespressoSvg {
