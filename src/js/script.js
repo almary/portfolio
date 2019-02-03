@@ -6,18 +6,21 @@ var arrowRight = document.querySelectorAll(".project__arrow--right");
 var arrowLeft = document.querySelectorAll(".project__arrow--left");
 var mover = document.getElementById("mover");
 var wikipediaSvg = document.querySelector(".wikipediaSvg");
-var bearMouth = document.querySelector(".bear--mouth");
-var bearHead = document.querySelector(".bear--head");
+var amazonSvgLine = document.querySelector(".amazonSvg--line");
+var amazonSvgArrow = document.querySelector(".amazonSvg--arrow");
+var amazonSvgA = document.querySelector(".amazonSvg--a");
 var nespressoSvg = document.querySelector(".nespressoSvg");
 var titleBackground = document.querySelectorAll(".project__title--background");
 var details = document.querySelectorAll(".project__details");
 var countNumber = document.querySelectorAll(".project__count--number");
 var wikipediaBackground = document.querySelector(".wikipediaBackground");
-var bearBackground = document.querySelector(".bearBackground");
+var amazonBackgroundA = document.querySelector(".amazonBackground--a");
+var amazonBackgroundArrow = document.querySelector(".amazonBackground--arrow");
+var amazonBackgroundLine = document.querySelector(".amazonBackground--line");
 var nespressoBackground = document.querySelector(".nespressoBackground");
 
 var projectClickWikiepdia = document.getElementById("projectClickWikipedia");
-var projectClickMoschino = document.getElementById("projectClickMoschino");
+var projectClickAmazon = document.getElementById("projectClickAmazon");
 var projectClickNespresso = document.getElementById("projectClickNespresso");
 
 var backgroundCopy = document.querySelectorAll(
@@ -143,9 +146,12 @@ function leave() {
   }
 
   if (index === 1) {
-    leaveSvg(bearMouth);
-    leaveSvg(bearHead);
-    leaveSvg(bearBackground);
+    leaveSvg(amazonSvgLine);
+    leaveSvg(amazonSvgArrow);
+    leaveSvg(amazonSvgA);
+    leaveSvg(amazonBackgroundA);
+    leaveSvg(amazonBackgroundArrow);
+    leaveSvg(amazonBackgroundLine);
 
     addLeave();
     addDetails();
@@ -182,9 +188,12 @@ function enter() {
   }
 
   if (index === 1) {
-    enterSvg(bearMouth);
-    enterSvg(bearHead);
-    enterSvg(bearBackground);
+    enterSvg(amazonSvgLine);
+    enterSvg(amazonSvgArrow);
+    enterSvg(amazonSvgA);
+    enterSvg(amazonBackgroundA);
+    enterSvg(amazonBackgroundArrow);
+    enterSvg(amazonBackgroundLine);
 
     removeLeave();
     removeDetails();
@@ -242,9 +251,9 @@ projectClickWikiepdia.addEventListener("click", function() {
   transition();
 });
 
-//moschino
-projectClickMoschino.addEventListener("click", function() {
-  delayUrlLoad("moschino.html", speed);
+//amazon
+projectClickAmazon.addEventListener("click", function() {
+  delayUrlLoad("amazon.html", speed);
   transition();
 });
 

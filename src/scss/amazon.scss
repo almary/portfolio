@@ -1,4 +1,4 @@
-.header--moschino .header--logoSvg {
+.header--amazon .header--logoSvg {
   display: block;
   height: 20px;
   width: auto;
@@ -8,25 +8,25 @@
   }
 }
 
-.header--moschino.isScrolled .header--logoSvg {
+.header--amazon.isScrolled .header--logoSvg {
   fill: black;
 }
 
-.header--moschino .header--works,
-.header--moschino .header--about {
+.header--amazon .header--works,
+.header--amazon .header--about {
   color: white;
 }
 
-.header--moschino.isScrolled .header--works,
-.header--moschino.isScrolled .header--about {
+.header--amazon.isScrolled .header--works,
+.header--amazon.isScrolled .header--about {
   color: black;
 }
 
-.title__background--moschino {
+.title__background--amazon {
   background: #ab7723;
 }
 
-.title__moschino {
+.title__amazon {
   position: absolute;
   color: white;
   font-size: 35px;
@@ -38,7 +38,7 @@
    }
 }
 
-.moschino__description {
+.amazon__description {
   font-family: "Neue Haas Grotesk", sans-serif;
   font-size: 12px;
   margin: 20px 20px 0 20px;
@@ -46,7 +46,7 @@
   color: rgb(87, 87, 87);
 }
 
-.moschino__illustration {
+.amazon__illustration {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,10 +55,10 @@
   margin-top: 15px;
 }
 
-.moschino__illustration--one,
-.moschino__illustration--two,
-.moschino__illustration--three,
-.moschino__illustration--four {
+.amazon__illustration--one,
+.amazon__illustration--two,
+.amazon__illustration--three,
+.amazon__illustration--four {
   width: 90vw;
   border: #ab7723 2px solid;
 }
