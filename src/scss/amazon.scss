@@ -1,64 +1,42 @@
-.header--amazon .header--logoSvg {
-  display: block;
-  height: 20px;
-  width: auto;
-  fill: #ffffff;
-  @include large {
-    height: 25px;
-  }
-}
-
-.header--amazon.isScrolled .header--logoSvg {
-  fill: black;
-}
-
-.header--amazon .header--works,
-.header--amazon .header--about {
-  color: white;
-}
-
-.header--amazon.isScrolled .header--works,
-.header--amazon.isScrolled .header--about {
-  color: black;
+.progress--amazon {
+  background: #eb8e06;
 }
 
 .title__background--amazon {
-  background: #ab7723;
+  background: #eb8e06;
 }
 
-.title__amazon {
-  position: absolute;
-  color: white;
-  font-size: 35px;
-  bottom: 15px;
-  width: 100vw; // repet
-  text-align: center;
-  @include large {
-    font-size: 60px
-   }
-}
-
-.amazon__description {
-  font-family: "Neue Haas Grotesk", sans-serif;
-  font-size: 12px;
-  margin: 20px 20px 0 20px;
-  line-height: 1.3em;
-  color: rgb(87, 87, 87);
-}
-
-.amazon__illustration {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.amazon__lines {
+  height: 100vh;
   width: 100vw;
-  margin-top: 15px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  opacity: 0.1;
+  z-index: 0;
 }
 
-.amazon__illustration--one,
-.amazon__illustration--two,
-.amazon__illustration--three,
-.amazon__illustration--four {
-  width: 90vw;
-  border: #ab7723 2px solid;
+.amazon__lines--one,
+.amazon__lines--two,
+.amazon__lines--three,
+.amazon__lines--four {
+  height: 100%;
+  width: 1px;
+  background: #eb8e06;
+}
+
+.amazonBackground.move {
+  animation: backgroundMove ease-in-out 2s infinite alternate;
+}
+
+.amazon .text::selection {
+  background: #eb8e06; /* WebKit/Blink Browsers */
+  color: white;
+}
+
+.amazon .text::-moz-selection {
+  background: #eb8e06; /* Gecko Browsers */
+  color: white;
 }

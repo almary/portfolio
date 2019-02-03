@@ -18,106 +18,325 @@
       href="scss/styles.scss"
     />
     <script defer src="js/menu.js"></script>
-    <script defer src="js/scrollAmazon.js"></script>
+    <script defer src="js/cursor.js"></script>
+    <script defer src="js/scrollWiki.js"></script>
+    <script defer src="js/skew.js"></script>
+    <script defer src="js/lazyload.js"></script>
   </head>
 
   <body>
-      <header class="header header--amazon">
-          <a href="index.html" class="header--logo">
+    <div class="background amazon">
+      <div class="cursor" id="cursor"></div>
+      <div class="progress progress--amazon"></div>
+      <header class="header header--wikipedia noselect">
+        <a href="index.html" class="header--logo">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg
+            class="header--logoSvg"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 20 21"
+            style="enable-background:new 0 0 20 21;"
+            xml:space="preserve"
+          >
+            <path
+              d="M14.4,1.5v1.7C13.2,1.8,11.4,1,8.9,1c-4.8,0-8.8,4.3-8.8,9.8s4,9.8,8.8,9.8c2.5,0,4.3-0.9,5.5-2.3V20H20V1.5H14.4z M10,15.3
+                    c-2.6,0-4.4-1.7-4.4-4.5S7.5,6.2,10,6.2c2.6,0,4.4,1.7,4.4,4.5S12.6,15.3,10,15.3z"
+            />
+          </svg>
+        </a>
+        <div class="headerWrapper">
+          <a class="header--works" id="headerWorks">
+            <div class="header--worksMover" id="headerWorksMover">
+              <div>all projects</div>
+              <div>close</div>
+            </div></a
+          >
+          <a class="header--about">about</a>
+        </div>
+        <div class="header--menu" id="headerMenu">
+          <!-- <div class="menu__title">all works</div> -->
+          <div class="menu__wikipedia">
+            <a href="wikipedia.html">
+              <div class="menu__wikipedia menu__wikipedia--background">
+                <div class="menu__wikipedia menu__wikipedia--name">
+                  WIKIPEDIA
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="menu__amazon">
+            <a href="amazon.html">
+              <div class="menu__amazon menu__amazon--background">
+                <div class="menu__amazon menu__amazon--name">AMAZON</div>
+              </div>
+            </a>
+          </div>
+          <div class="menu__nespresso">
+            <a href="nespresso.html">
+              <div class="menu__nespresso menu__nespresso--background">
+                <div class="menu__nespresso menu__nespresso--name">
+                  NESPRESSO
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="header__about noselect" id="headerAbout">
+          <div class="header__about--close" id="closeAbout">
+            <a class="header__about--closeText">close</a>
+          </div>
+          <div class="header__about--wrapper">
             <?xml version="1.0" encoding="utf-8"?>
             <svg
-              class="header--logoSvg"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
               y="0px"
-              viewBox="0 0 20 21"
-              style="enable-background:new 0 0 20 21;"
+              viewBox="0 0 278 46"
+              style="enable-background:new 0 0 278 46;"
+              xml:space="preserve"
+              class="header__about--svg"
+            >
+              <text transform="matrix(1 0 0 1 1 44)">
+                <tspan x="0" y="0" class="header__about--about">ABOUT</tspan>
+                <tspan x="195.5" y="0" class="header__about--me">ME</tspan>
+              </text>
+            </svg>
+            <!-- <tspan x="195.5" y="0" class="header__about--meCopy">ME</tspan> -->
+            <div class="header__about--description">
+              I’m <em>Alexandre Mary</em>, a <em>french designer</em> based in
+              <em>Paris</em> and first year student at HETIC. <br />I love
+              challenges to improve myself and solve problems with creative
+              solutions. <br />
+              <br />
+
+              I’m currently looking for an <em>internship</em> in Paris from
+              july to september.
+            </div>
+            <div class="header__about--contacts">
+              <div class="header__about--contact">CONTACT</div>
+              <div class="header__about--links">
+                <a href="mailto:alexandre.mary.adenni@gmail.com">MAIL</a>
+                <a
+                  href="https://www.linkedin.com/in/alexandre-mary/"
+                  target="_blank"
+                  >LINKEDIN</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="whiteSlide isClicked fadeOut"></div>
+      <div class="title noselect">
+        <div class="title__background title__background--amazon"></div>
+        <div class="title__wikipedia" rel="preload">AMAZON</div>
+        <div class="amazon__lines">
+          <span class="amazon__lines--one"></span>
+          <span class="amazon__lines--two"></span>
+          <span class="amazon__lines--three"></span>
+          <span class="amazon__lines--four"></span>
+        </div>
+      </div>
+      <div class="wikipedia__description">
+        <div class="svgProject">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg
+            version="1.1"
+            xmlns:cc="http://creativecommons.org/ns#"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns:svg="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 800.1 678.6"
+            style="enable-background:new 0 0 800.1 678.6;"
+            xml:space="preserve"
+          >
+            <path
+              id="path3719"
+              inkscape:connector-curvature="0"
+              class="amazonSvg amazonSvg--arrow"
+              d="M720,576.4C633.6,640.1,508.4,674,400.6,674
+            c-151.1,0-287.1-55.8-390.1-148.8c-8.1-7.3-0.9-17.3,8.8-11.6c111.1,64.7,248.5,103.6,390.4,103.6c95.7,0,200.9-19.8,297.7-60.9
+            C722,550,734.3,565.9,720,576.4L720,576.4z"
+            />
+            <path
+              id="path3721"
+              inkscape:connector-curvature="0"
+              class="amazonSvg amazonSvg--line"
+              d="M755.9,535.4c-11-14.1-73-6.7-100.8-3.3
+            c-8.5,1-9.8-6.4-2.2-11.7c49.4-34.7,130.4-24.7,139.8-13.1c9.5,11.8-2.5,93-48.8,131.7c-7.1,6-13.9,2.8-10.7-5.1
+            C743.6,607.8,767,549.5,755.9,535.4z"
+            />
+            <path
+              id="path3673"
+              inkscape:connector-curvature="0"
+              class="amazonSvg amazonSvg--a"
+              d="M612.2,424.7c-16.4-22.5-34.1-40.8-34.1-82.7V203
+            c0-58.9,4.3-113-39.6-153.5C503.9,16.6,446.5,5,402.7,5C316.8,5,221.1,36.7,201,141.6c-2.1,11.1,6.1,17,13.5,18.6l87.4,9.4
+            c8.2-0.4,14.1-8.4,15.7-16.4c7.5-36.2,38.1-53.5,72.5-53.5c18.6,0,39.6,6.7,50.6,23.2c12.6,18.3,10.9,43.5,10.9,64.7v11.7
+            c-52.3,5.8-120.7,9.6-169.6,30.9c-56.5,24.2-96.1,73.4-96.1,145.8c0,92.8,59,139.1,135,139.1c64.1,0,99.2-15,148.7-64.9
+            c16.4,23.5,21.8,34.9,51.7,59.5c6.7,3.5,15.4,3.2,21.3-2.1l0,0l0.2,0.2c18-15.8,50.7-44,69.2-59.3
+            C619.2,442.5,617.9,432.8,612.2,424.7z M434.7,384.6c-14.3,25.2-37.1,40.6-62.5,40.6c-34.5,0-54.8-26.1-54.8-64.7
+            c0-76,68.9-89.8,134.1-89.8v19.3h0C451.6,324.7,452.4,353.7,434.7,384.6z"
+            />
+          </svg>
+          <div class="amazonBackground--wrapper">
+            <svg
+              version="1.1"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+              xmlns:svg="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 800.1 678.6"
+              style="enable-background:new 0 0 800.1 678.6;"
               xml:space="preserve"
             >
               <path
-                d="M14.4,1.5v1.7C13.2,1.8,11.4,1,8.9,1c-4.8,0-8.8,4.3-8.8,9.8s4,9.8,8.8,9.8c2.5,0,4.3-0.9,5.5-2.3V20H20V1.5H14.4z M10,15.3
-                        c-2.6,0-4.4-1.7-4.4-4.5S7.5,6.2,10,6.2c2.6,0,4.4,1.7,4.4,4.5S12.6,15.3,10,15.3z"
+                id="path3719"
+                inkscape:connector-curvature="0"
+                class="amazonBackground amazonBackground--arrow enter move"
+                d="M720,576.4C633.6,640.1,508.4,674,400.6,674
+            c-151.1,0-287.1-55.8-390.1-148.8c-8.1-7.3-0.9-17.3,8.8-11.6c111.1,64.7,248.5,103.6,390.4,103.6c95.7,0,200.9-19.8,297.7-60.9
+            C722,550,734.3,565.9,720,576.4L720,576.4z"
+              />
+              <path
+                id="path3721"
+                inkscape:connector-curvature="0"
+                class="amazonBackground amazonBackground--line enter move"
+                d="M755.9,535.4c-11-14.1-73-6.7-100.8-3.3
+            c-8.5,1-9.8-6.4-2.2-11.7c49.4-34.7,130.4-24.7,139.8-13.1c9.5,11.8-2.5,93-48.8,131.7c-7.1,6-13.9,2.8-10.7-5.1
+            C743.6,607.8,767,549.5,755.9,535.4z"
+              />
+              <path
+                id="path3673"
+                inkscape:connector-curvature="0"
+                class="amazonBackground amazonBackground--a enter move"
+                d="M612.2,424.7c-16.4-22.5-34.1-40.8-34.1-82.7V203
+            c0-58.9,4.3-113-39.6-153.5C503.9,16.6,446.5,5,402.7,5C316.8,5,221.1,36.7,201,141.6c-2.1,11.1,6.1,17,13.5,18.6l87.4,9.4
+            c8.2-0.4,14.1-8.4,15.7-16.4c7.5-36.2,38.1-53.5,72.5-53.5c18.6,0,39.6,6.7,50.6,23.2c12.6,18.3,10.9,43.5,10.9,64.7v11.7
+            c-52.3,5.8-120.7,9.6-169.6,30.9c-56.5,24.2-96.1,73.4-96.1,145.8c0,92.8,59,139.1,135,139.1c64.1,0,99.2-15,148.7-64.9
+            c16.4,23.5,21.8,34.9,51.7,59.5c6.7,3.5,15.4,3.2,21.3-2.1l0,0l0.2,0.2c18-15.8,50.7-44,69.2-59.3
+            C619.2,442.5,617.9,432.8,612.2,424.7z M434.7,384.6c-14.3,25.2-37.1,40.6-62.5,40.6c-34.5,0-54.8-26.1-54.8-64.7
+            c0-76,68.9-89.8,134.1-89.8v19.3h0C451.6,324.7,452.4,353.7,434.7,384.6z"
               />
             </svg>
-          </a>
-          <div class="headerWrapper">
-            <a href="#" class="header--works" id="headerWorks">
-              <div class="header--worksMover" id="headerWorksMover">
-                <div>all projects</div>
-                <div>close</div>
-              </div></a
-            >
-            <a href="#" class="header--about">about</a>
           </div>
-          <div class="header--menu" id="headerMenu">
-            <!-- <div class="menu__title">all works</div> -->
-            <div class="menu__wikipedia">
-              <a href="wikipedia.html">
-                <div class="menu__wikipedia menu__wikipedia--background">
-                  <div class="menu__wikipedia menu__wikipedia--name">WIKIPEDIA</div>
-                </div>
-              </a>
-            </div>
-            <div class="menu__amazon">
-              <a href="amazon.html">
-                <div class="menu__amazon menu__amazon--background">
-                  <div class="menu__amazon menu__amazon--name">MOSCHINO</div>
-                </div>
-              </a>
-            </div>
-            <div class="menu__nespresso">
-              <a href="nespresso.html">
-                <div class="menu__nespresso menu__nespresso--background">
-                  <div class="menu__nespresso menu__nespresso--name">NESPRESSO</div>
-                </div>
-              </a>
-            </div>
+        </div>
+        <div class="description__text text">
+          For a school project, I had to redesign a wikipedia article page. The
+          goal was to make the content more enjoyable to read.
+        </div>
+      </div>
+      <div class="wikipedia__description">
+        <div class="description__wrapper description__wrapper--order">
+          <div class=" description__text text">
+            First of all, I had to study the actual website. <br />
+            What can be improved?
           </div>
-        </header>
-    
-    <div class="title">
-      <!-- <div class="title__background title__background--amazon"></div>
-      <div class="title__amazon">MOSCHINO</div>
+          <div class=" description__text text">
+            There were 4 sections. Each of them contains useful features. <br />
+            Let’s sort it out.
+          </div>
+        </div>
+        <video
+          autoplay
+          loop
+          muted
+          src="assets/wikipedia-video.webm"
+          class="description__video lazyload"
+        ></video>
+      </div>
+      <div class="wikipedia__description">
+        <img
+          src="assets/wikipedia-screen-font.png"
+          alt="font illustration"
+          class="description__image lazyload"
+        />
+        <div class="description__wrapper">
+          <div class="description__text text">
+            The main focus was the typography and all the parameters that come
+            with it.
+          </div>
+          <div class="description__text text">
+            First, the font. <br />
+            Serif, for the reading. <br />
+            Sans-serif for all others readable texts.
+          </div>
+        </div>
+      </div>
+      <div class="wikipedia__description">
+        <div class="description__wrapper description__wrapper--order">
+          <div class="description__text text">
+            For an optimal reading on screen, we need between 50 and 100
+            character per lines. <br />
+            <br />
+
+            So, with the Merryweather font at 16 px, a width of 600px is almost
+            perfect. <br />
+            <br />
+            A line now contains on average 75 characters.
+          </div>
+        </div>
+        <img
+          src="assets/wikipedia-screen-parameters.jpg"
+          alt="parameters illustration"
+          class="description__image lazyload"
+        />
+      </div>
+      <div class="wikipedia__description wikipedia__description--column">
+        <div class="description__wrapper">
+          <div class="description__text text">
+            We reorganize the sections, and here we go.
+          </div>
+        </div>
+        <img
+          src="assets/wikipedia-screen1.png"
+          alt="redesign screenshot"
+          class="description__image description__image--large lazyload"
+        />
+        <div class="description__wrapper">
+          <div class="text"><br />...<br /><br /></div>
+        </div>
+        <img
+          src="assets/wikipedia-screen2.png"
+          alt="redesign screenshot"
+          class="description__image description__image--large lazyload"
+        />
+      </div>
+      <div class="wikipedia__description">
+        <div class="description__wrapper description__wrapper--order">
+          <div class=" description__text text">
+            With some features
+          </div>
+        </div>
+        <video
+          autoplay
+          loop
+          muted
+          src="assets/wikipedia-video-features.webm"
+          class="description__video lazyload"
+        ></video>
+      </div>
+      <div class="next">
+        <a href="nespresso.html" class="next--container">
+          <div class="next--text">next project</div>
+        </a>
+      </div>
     </div>
-    <div class="amazon__description">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. In qui eaque
-      obcaecati aut laboriosam sunt neque, voluptatibus expedita omnis ab id
-      nostrum earum sequi placeat hic eos aliquid, adipisci voluptas! group of
-      5, code.. etc live project after two month of work etc..
-    </div>
-    <div class="amazon__illustration">
-      <img
-        src="assets/amazon-screen1.png"
-        alt="amazon redesign screenshot"
-        class="amazon__illustration amazon__illustration--one"
-      />
-      <img
-        src="assets/amazon-screen2.png"
-        alt="amazon redesign screenshot"
-        class="amazon__illustration amazon__illustration--two"
-      /> -->
-      <!-- <img
-        src="assets/wikipedia-screen3.png"
-        alt="amazon redesign screenshot"
-        class="amazon__illustration amazon__illustration--three"
-      /> -->
-      <!-- <video
-        autoplay
-        loop
-        muted
-        src="assets/wikipedia-video1.webm"
-        class="amazon__illustration amazon__illustration--four"
-      ></video> -->
-    </div>
-    <div class="footer"><p>next project</p></div>
-    <!-- <div class="wikipedia__illustration"></div>
-    <div class="wikipedia__illustration"></div> -->
-    <!-- <div class="animation">
-      <div class="animation__hide"></div>
-      <div class="animation__one"></div>
-      <div class="animation__two"></div>
-    </div> -->
   </body>
 </html>
