@@ -86,7 +86,7 @@
 
 @keyframes dashAmazonArrow {
   to {
-    stroke-dashoffset: 1540;
+    stroke-dashoffset: 1550;
   }
 }
 
@@ -695,7 +695,7 @@ em {
 
 .amazonSvg--arrow {
   stroke-miterlimit: 10;
-  stroke-dasharray: 1540;
+  stroke-dasharray: 1550;
   stroke-dashoffset: 0;
 }
 
@@ -704,7 +704,7 @@ em {
 }
 
 .amazonSvg--arrow.enter {
-  stroke-dashoffset: 1540;
+  stroke-dashoffset: 1550;
   animation: dashAmazonArrowEnter 1s linear forwards;
 }
 
@@ -840,18 +840,17 @@ em {
 .project__details {
   width: 310px;
   margin-top: 20px;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-around;
   text-align: center;
   line-height: 1.05em;
   color: #3c6dbf;
   transition: transform 1s ease-in-out;
+  height: 17px;
   @include large {
     margin-top: 0;
     font-size: 40px;
     transform: rotate(-90deg) translateX(-310px);
     transform-origin: top left;
+    height: auto;
   }
 }
 

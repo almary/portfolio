@@ -34,7 +34,6 @@ var whiteSlide = document.querySelector(".whiteSlide");
 
 addListener();
 function addListener() {
-  console.log("add");
 
   // Arrows
   for (let i = 0; i < arrowRight.length; i++) {
@@ -55,13 +54,10 @@ function addListener() {
 }
 
 function wheelDetection(event) {
-  console.log(event.deltaY);
   if (event.deltaY > 50) {
-    console.log("scroll down");
     next();
   }
   if (event.deltaY < -50) {
-    console.log("scroll up");
     back();
   }
 }
@@ -69,17 +65,14 @@ function wheelDetection(event) {
 function wheelDetectionFirefox(event) {
   var y = event.detail;
   if (event.detail > 2) {
-    console.log("scroll down");
     next();
   }
   if (event.detail < -2) {
-    console.log("scroll up");
     back();
   }
 }
 
 function removeListener() {
-  console.log("remove");
   for (let i = 0; i < arrowRight.length; i++) {
     arrowRight[i].removeEventListener("click", next);
   }
@@ -273,8 +266,6 @@ function delayUrlLoad(url, mils) {
 // Transition click
 function transition() {
   for (let i = 0; i < backgrounds.length; i++) {
-    console.log("test");
-    console.log(backgrounds[i]);
     backgroundCopy[i].classList.add("isClicked");
     nameCopy[i].classList.add("isClicked");
     backgrounds[i].classList.add("isClicked");
