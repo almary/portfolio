@@ -152,7 +152,7 @@
     color: #333333;
     // border: red 2px solid;
     position: relative;
-    height: 30vw;
+    // height: 30vw;
   }
 }
 
@@ -167,7 +167,6 @@
   // height: 700px;
   @include large {
     height: 100vw;
-    border: red 2px solid;
   }
 }
 
