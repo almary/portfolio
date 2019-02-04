@@ -193,7 +193,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: inherit;
   // margin-bottom: 300px;
 }
 
@@ -219,10 +218,6 @@
   @include large {
     width: 70vw;
   }
-}
-
-.description__image--largeSecond {
-  margin-top: 150px;
 }
 
 .next {
