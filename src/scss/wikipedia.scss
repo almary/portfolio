@@ -152,7 +152,7 @@
     color: #333333;
     // border: red 2px solid;
     position: relative;
-    // height: 30vw;
+    height: 30vw;
   }
 }
 
@@ -219,6 +219,10 @@
   @include large {
     width: 70vw;
   }
+}
+
+.description__image--largeSecond {
+  margin-top: 150px;
 }
 
 .next {
