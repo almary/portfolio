@@ -166,7 +166,8 @@
   flex-direction: column;
   // height: 700px;
   @include large {
-    height: 2000px;
+    height: 100vw;
+    border: red 2px solid;
   }
 }
 
