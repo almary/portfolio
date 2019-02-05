@@ -28,7 +28,7 @@
   z-index: 2;
 }
 
-.header--amazon .header--logoSvg {
+.header--wikipedia .header--logoSvg {
   display: block;
   height: 20px;
   width: auto;
@@ -38,17 +38,17 @@
   }
 }
 
-.header--amazon.isScrolled .header--logoSvg {
+.header--wikipedia.isScrolled .header--logoSvg {
   fill: black;
 }
 
-.header--amazon .header--works,
-.header--amazon .header--about {
+.header--wikipedia .header--works,
+.header--wikipedia .header--about {
   color: white;
 }
 
-.header--amazon.isScrolled .header--works,
-.header--amazon.isScrolled .header--about {
+.header--wikipedia.isScrolled .header--works,
+.header--wikipedia.isScrolled .header--about {
   color: black;
 }
 
@@ -83,11 +83,11 @@
   }
 }
 
-.title__background--amazon {
+.title__background--wikipedia {
   background: #3c6dbf;
 }
 
-.title__amazon {
+.title__wikipedia {
   position: absolute;
   color: white;
   font-size: 35px;
@@ -99,7 +99,7 @@
   }
 }
 
-.amazon__lines {
+.wikipedia__lines {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -111,10 +111,10 @@
   z-index: 0;
 }
 
-.amazon__lines--one,
-.amazon__lines--two,
-.amazon__lines--three,
-.amazon__lines--four {
+.wikipedia__lines--one,
+.wikipedia__lines--two,
+.wikipedia__lines--three,
+.wikipedia__lines--four {
   height: 100%;
   width: 1px;
   background: #3c6dbf;
@@ -130,11 +130,11 @@
   }
 }
 
-.amazonBackground.move {
+.wikipediaBackground.move {
   animation: backgroundMove ease-in-out 2s infinite alternate;
 }
 
-.amazon__description {
+.wikipedia__description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,17 +156,17 @@
   }
 }
 
-.amazon__description:nth-child(3) {
+.wikipedia__description:nth-child(3) {
   height: 400px;
   // border: #3c6dbf solid 2px;
   // background: white;
 }
 
-.amazon__description--column {
+.wikipedia__description--column {
   flex-direction: column;
   // height: 700px;
   @include large {
-    height: 255vw;
+    height: 50vw;
   }
 }
 
@@ -272,7 +272,7 @@
   z-index: 2;
 }
 
-// .amazon__illustration {
+// .wikipedia__illustration {
 //   display: flex;
 //   flex-direction: column;
 //   justify-content: center;
@@ -281,10 +281,10 @@
 //   margin-top: 15px;
 // }
 
-// .amazon__illustration--one,
-// .amazon__illustration--two,
-// .amazon__illustration--three,
-// .amazon__illustration--four {
+// .wikipedia__illustration--one,
+// .wikipedia__illustration--two,
+// .wikipedia__illustration--three,
+// .wikipedia__illustration--four {
 //   width: 90vw;
 //   border: #3c6dbf 2px solid;
 // }

@@ -40,3 +40,95 @@
   background: #eb8e06; /* Gecko Browsers */
   color: white;
 }
+
+.header--amazon .header--logoSvg {
+  display: block;
+  height: 20px;
+  width: auto;
+  fill: #ffffff;
+  @include large {
+    height: 25px;
+  }
+}
+
+.header--amazon.isScrolled .header--logoSvg {
+  fill: black;
+}
+
+.header--amazon .header--works,
+.header--amazon .header--about {
+  color: white;
+}
+
+.header--amazon.isScrolled .header--works,
+.header--amazon.isScrolled .header--about {
+  color: black;
+}
+
+.title__background {
+  width: 100vw;
+  height: 120px;
+  @include large {
+    height: 155px;
+  }
+}
+
+.title__amazon {
+  position: absolute;
+  color: white;
+  font-size: 35px;
+  bottom: 15px;
+  width: 100vw; // repet
+  text-align: center;
+  @include large {
+    font-size: 60px;
+  }
+}
+
+.amazon__lines {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.amazon__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  @include large {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 80px;
+    line-height: 1.3em;
+    color: #333333;
+    // border: red 2px solid;
+    position: relative;
+    height: 30vw;
+  }
+}
+
+.amazon__description:nth-child(3) {
+  height: 400px;
+  // border: #3c6dbf solid 2px;
+  // background: white;
+}
+
+.amazon__description--column {
+  flex-direction: column;
+  // height: 700px;
+  @include large {
+    height: 255vw;
+  }
+}
