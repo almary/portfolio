@@ -7,7 +7,7 @@ if (window.matchMedia("(min-width: 750px)").matches) {
   const looper = function() {
     const newPixel = window.pageYOffset;
     var diff = newPixel - currentPixel;
-    var speed = diff * 0.02;
+    var speed = diff * 0.1;
     for (let i = 0; i < images.length; i++) {
       images[i].style.transform = "skewY(" + speed + "deg)";
     }
