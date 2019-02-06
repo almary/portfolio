@@ -1,3 +1,46 @@
+.progress--nespresso {
+  background: black;
+}
+
+.title__background--nespresso {
+  background: black;
+}
+
+.nespresso__lines {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.nespresso__lines--one,
+.nespresso__lines--two,
+.nespresso__lines--three,
+.nespresso__lines--four {
+  height: 100%;
+  width: 1px;
+  background: black;
+}
+
+.nespressoBackground.move {
+  animation: backgroundMove ease-in-out 2s infinite alternate;
+}
+
+.nespresso .text::selection {
+  background: black; /* WebKit/Blink Browsers */
+  color: white;
+}
+
+.nespresso .text::-moz-selection {
+  background: black; /* Gecko Browsers */
+  color: white;
+}
+
 .header--nespresso .header--logoSvg {
   display: block;
   height: 20px;
@@ -12,18 +55,23 @@
   fill: black;
 }
 
-.header--nespresso .header--works, .header--nespresso .header--about {
+.header--nespresso .header--works,
+.header--nespresso .header--about {
   color: white;
 }
 
-.header--nespresso.isScrolled .header--works, .header--nespresso.isScrolled .header--about {
+.header--nespresso.isScrolled .header--works,
+.header--nespresso.isScrolled .header--about {
   color: black;
 }
 
-.title__background--nespresso {
-  background: black;
+.title__background {
+  width: 100vw;
+  height: 120px;
+  @include large {
+    height: 155px;
+  }
 }
-
 
 .title__nespresso {
   position: absolute;
@@ -33,28 +81,58 @@
   width: 100vw; // repet
   text-align: center;
   @include large {
-    font-size: 60px
-   }
+    font-size: 60px;
+  }
+}
+
+.nespresso__lines {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  opacity: 0.1;
+  z-index: 0;
 }
 
 .nespresso__description {
-  font-family: "Neue Haas Grotesk", sans-serif;
-  font-size: 12px;
-  margin: 20px 20px 0 20px;
-  line-height: 1.3em;
-  color: rgb(87, 87, 87);
-}
-
-.nespresso__illustration {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  margin-top: 15px;
+  margin-top: 30px;
+  @include large {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 80px;
+    line-height: 1.3em;
+    color: #333333;
+    // border: red 2px solid;
+    position: relative;
+    height: 30vw;
+  }
 }
 
-.nespresso__illustration--one, .nespresso__illustration--two, .nespresso__illustration--three, .nespresso__illustration--four {
-  width: 90vw;
-  border: black 2px solid;
+.nespresso__description--large {
+  @include large {
+    height: 60vw;
+  }
+}
+
+.nespresso__description:nth-child(3) {
+  height: 400px;
+}
+
+.nespresso__description--column {
+  flex-direction: column;
+  // height: 700px;
+  @include large {
+    height: 290vw;
+  }
 }
