@@ -43,22 +43,3 @@ for (let i = 0; i < links.length; i++) {
     cursor.classList.remove("hover");
   });
 }
-
-// Deformation
-
-// pas opti
-// document.addEventListener("mousemove", test);
-
-// function test(e) {
-//   valeur = Math.atan2(e.clientY - yPos, e.clientX - xPos) * (180 / Math.PI);
-//   // console.log(valeur);
-//   // transformTest = window.getComputedStyle(cursor).getPropertyValue("transform");
-//   cursor.style.transform = "rotate(" + valeur + "deg)" + "skew(150deg)";
-//   valeurBefore = valeur;
-//   xPos = e.clientX;
-//   yPos = e.clientY;
-// }
-
-// this.$c.style.transform =
-//         " rotate( calc( var(--rotation) * 1rad) )"
-//         + " scaleX( calc( var(--vx)/2 + var(--vy)/2 + 1 ) )";

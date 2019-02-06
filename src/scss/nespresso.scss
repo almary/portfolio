@@ -78,7 +78,7 @@
   color: white;
   font-size: 35px;
   bottom: 15px;
-  width: 100vw; // repet
+  width: 100vw;
   text-align: center;
   @include large {
     font-size: 60px;
@@ -113,7 +113,6 @@
     margin-top: 80px;
     line-height: 1.3em;
     color: #333333;
-    // border: red 2px solid;
     position: relative;
     height: 30vw;
   }
@@ -131,7 +130,6 @@
 
 .nespresso__description--column {
   flex-direction: column;
-  // height: 700px;
   @include large {
     height: 290vw;
   }

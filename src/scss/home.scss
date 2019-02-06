@@ -1,4 +1,4 @@
-//virer les classes en trop du html ??!!
+//virer les classes en trop du html
 
 @mixin large {
   @media (min-width: 750px) {
@@ -28,13 +28,6 @@
   font-weight: normal;
   src: url("../font/NHaasGroteskTXPro-55Rg.woff") format("woff");
 }
-
-// @font-face {
-//   font-family: "Neue Haas Grotesk";
-//   font-style: bold;
-//   font-weight: 900;
-//   src: url("../font/NHaasGroteskTXPro-75Bd.woff") format("woff");
-// }
 
 @keyframes dash {
   to {
@@ -203,7 +196,6 @@ em {
   z-index: 2;
   padding-top: 10px;
   width: 100vw;
-  // border: red 2px solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -280,7 +272,7 @@ em {
   justify-content: center;
   align-items: center;
   font-size: 35px;
-  transition: height 1s; //transform du height ici, pas opti ?
+  transition: height 1s;
   background: white;
   @include large {
     background: none;
@@ -346,7 +338,6 @@ em {
 }
 
 .header__about--wrapper {
-  // position: relative;
   height: 70vh;
   margin: 5vw;
   display: flex;
@@ -387,14 +378,6 @@ em {
     font-size: 16px;
   }
 }
-
-// .header__about--meCopy {
-//   position: absolute;
-//   color: #393939;
-//   top: 12vh;
-//   left:200px;
-//   z-index: -1;
-// }
 
 .header__about--description,
 .header__about--contact,
@@ -473,7 +456,7 @@ em {
 .whiteSlide.isClicked {
   opacity: 1;
   z-index: 1;
-  transform: translateY(120px); //120px
+  transform: translateY(120px);
   @include large {
     transform: translateY(155px);
   }
@@ -513,7 +496,7 @@ em {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; //repet dplsay flex
+  align-items: center;
   transform: translateY(-4vh);
 
   @include large {
@@ -612,7 +595,7 @@ em {
 
 .wikipediaBackground.enter {
   animation: backgroundWikipediaEnter 1s forwards;
-  animation-delay: 0.3s; // repet animation delay partout
+  animation-delay: 0.3s;
 }
 
 .amazonBackground.enter,
@@ -624,37 +607,8 @@ em {
 .wikipediaBackground.leave,
 .amazonBackground.leave,
 .nespressoBackground.leave {
-  animation: backgroundLeave 1s forwards; //marche pas
+  animation: backgroundLeave 1s forwards;
 }
-
-// .bear--mouth,
-// .bear--head {
-//   fill: none;
-//   stroke: #000000;
-//   stroke-width: 2;
-//   stroke-miterlimit: 10;
-//   stroke-dasharray: 830;
-//   stroke-dashoffset: 0;
-// }
-
-// .bear--head.leave {
-//   animation: dashBearHead 1s linear forwards;
-// }
-
-// .bear--mouth.leave {
-//   stroke-dasharray: 360;
-//   animation: dashBearMouth 1s linear forwards;
-// }
-
-// .bear--head.enter {
-//   stroke-dashoffset: 800;
-//   animation: dashBearHeadEnter 1s linear forwards;
-// }
-
-// .bear--mouth.enter {
-//   stroke-dashoffset: 900;
-//   animation: dashBearMouthEnter 1s linear forwards;
-// }
 
 .amazonSvg {
   fill: none;
@@ -869,46 +823,17 @@ em {
   color: black;
 }
 
-// .details--title {
-//   font-weight: 300;
-//   padding-bottom: 3px;
-// }
-
 .wrapper--content,
 .wrapper--count {
   overflow: hidden;
 }
-
-// .details--content {
-//   font-size: 14px;
-//   color: #3c6dbf;
-//   transition: transform 1s ease-in-out;
-//   @include large {
-//     font-size: 20px;
-//   }
-// }
-
-// .details--content.leave {
-//   transform: translateY(30px);
-//   @include large {
-//     transform: translateY(50px);
-//   }
-// }
-
-// .project--amazon .details--content {
-//   color: #ab7723;
-// }
-
-// .project--nespresso .details--content {
-//   color: black;
-// }
 
 .wrapper {
   position: relative;
   width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: center; //repet
+  justify-content: center;
   margin-top: 10px;
   @include large {
     position: absolute;
@@ -932,7 +857,7 @@ em {
   width: 260px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around; //repet display
+  justify-content: space-around;
   @include large {
     width: auto;
     flex-direction: column;
@@ -940,7 +865,7 @@ em {
 }
 
 .project__count--slash {
-  color: #3c6dbf; ///repet
+  color: #3c6dbf;
   position: absolute;
   @include large {
     position: initial;

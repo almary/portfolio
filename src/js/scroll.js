@@ -1,4 +1,4 @@
-// Scroll header - wiki color
+// Scroll header color change
 window.onscroll = () => {
   var navWiki = document.querySelector(".header--wikipedia");
   if (window.scrollY <= 100) navWiki.className = "header header--wikipedia";

@@ -150,7 +150,6 @@
     margin-top: 80px;
     line-height: 1.3em;
     color: #333333;
-    // border: red 2px solid;
     position: relative;
     height: 30vw;
   }
@@ -158,13 +157,10 @@
 
 .wikipedia__description:nth-child(3) {
   height: 400px;
-  // border: #3c6dbf solid 2px;
-  // background: white;
 }
 
 .wikipedia__description--column {
   flex-direction: column;
-  // height: 700px;
   @include large {
     height: 50vw;
   }
@@ -271,84 +267,3 @@
 .next--text {
   z-index: 2;
 }
-
-// .wikipedia__illustration {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100vw;
-//   margin-top: 15px;
-// }
-
-// .wikipedia__illustration--one,
-// .wikipedia__illustration--two,
-// .wikipedia__illustration--three,
-// .wikipedia__illustration--four {
-//   width: 90vw;
-//   border: #3c6dbf 2px solid;
-// }
-
-// .footer {
-//   margin: 15px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-top: 40px;
-//   height: 100px;
-//   border: black 1.5px solid;
-//   text-align: center;
-// }
-
-// @keyframes slide {
-//   to {
-//     transform: translateY(-100vh);
-//   }
-// }
-
-// @keyframes hideAnimation {
-// 98% {
-//   opacity: 1;
-// }
-
-//   100% {
-//     opacity: 0;
-//     transform: translateY(-100vh);
-//   }
-// }
-
-// .animation {
-//   overflow: hidden;
-//   position: relative;
-//   height: 100vh;
-// }
-
-// .animation__one,
-// .animation__two,
-// .animation__hide {
-//   width: 100vw;
-//   height: 100vh;
-//   position: absolute;
-//   z-index: 2;
-// }
-
-// .animation__one,
-// .animation__two {
-//   transform: translateY(100vh);
-// }
-
-// .animation__hide {
-//   background: white;
-//   animation: hideAnimation 1s forwards;
-// }
-
-// .animation__one {
-//   background: #3c6dbf;
-//   animation: slide 1s ease-in-out forwards;
-// }
-
-// .animation__two {
-//   background: #234a8c;
-//   animation: slide 1s ease-in-out forwards;
-//   animation-delay: 0.2s;
-// }
