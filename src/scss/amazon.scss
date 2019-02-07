@@ -128,3 +128,16 @@
     height: 255vw;
   }
 }
+
+.wrapper__sections {
+  width: 50vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description__image--sections {
+  width: 14vw;
+  height: 23vw;
+}
