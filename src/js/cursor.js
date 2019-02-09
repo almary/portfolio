@@ -10,15 +10,15 @@ window.addEventListener("scroll", scrollUpdate);
 
 function scrollUpdate(e) {
   lastPosition = window.scrollY;
-  cursor.style.top = -20 + lastPosition + position + "px";
+  cursor.style.top = -13 + lastPosition + position + "px";
 }
 
 document.addEventListener("mousemove", mouseMove);
 
 function mouseMove(e) {
   position = e.clientY;
-  cursor.style.left = -20 + e.clientX + "px";
-  cursor.style.top = -20 + e.clientY + lastPosition + "px";
+  cursor.style.left = -13 + e.clientX + "px";
+  cursor.style.top = -13 + e.clientY + lastPosition + "px";
 }
 
 // Click animation
