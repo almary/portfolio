@@ -130,14 +130,25 @@
 }
 
 .wrapper__sections {
-  width: 50vw;
+  width: 90vw;
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @include large {
+    width: 50vw;
+  }
 }
 
 .description__image--sections {
-  width: 14vw;
-  height: 23vw;
+  width: 28vw;
+  height: 46vw;
+  @include large {
+    width: 14vw;
+    height: 23vw;
+  }
+}
+
+.description__wrapper--order  {
+  order: -1;
 }

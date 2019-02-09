@@ -60,8 +60,10 @@
   font-family: "Neue Haas Grotesk", sans-serif;
   font-size: 12px;
   font-weight: 300;
+  color: #444444;
   @include large {
     font-size: 17px;
+    color: black;
   }
 }
 
@@ -169,7 +171,7 @@
 .description__text {
   max-width: 80vw;
   text-align: center;
-  margin: 10px 0 10px 0;
+  margin-top: 10px;
   @include large {
     text-align: left;
     display: block;
@@ -204,8 +206,10 @@
   height: auto;
   box-shadow: 2px 2px 50px #f0f0f0;
   z-index: 1;
+  margin: 10px 0 10px 0;
   @include large {
     width: 50vw;
+    margin:0;
   }
 }
 
