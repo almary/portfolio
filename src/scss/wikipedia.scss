@@ -172,16 +172,25 @@
   max-width: 80vw;
   text-align: center;
   margin-top: 10px;
+  line-height: 156%;
   @include large {
     text-align: left;
     display: block;
     width: 250px;
     margin: 0 50px 0 50px;
+    line-height: 130%;
+  }
+}
+
+.description__text--intro {
+  font-weight: 900;
+  @include large {
+    font-weight: 300;
   }
 }
 
 .description__wrapper--order {
-  order: 1;
+  order: -1;
   @include large {
     order: 0;
   }
