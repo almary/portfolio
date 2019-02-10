@@ -20,3 +20,6 @@ function showPosition(elm){
 
   return pos;
 };
+
+
+// Animation appearance
