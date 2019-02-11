@@ -191,6 +191,10 @@ em {
   user-select: none;
 }
 
+h1 {
+  display: inline-block;
+}
+
 .header {
   position: fixed;
   z-index: 2;
