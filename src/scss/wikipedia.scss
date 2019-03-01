@@ -182,6 +182,10 @@
   }
 }
 
+.description__text--large {
+  width: 350px;
+}
+
 .description__text--intro {
   font-weight: 900;
   @include large {
