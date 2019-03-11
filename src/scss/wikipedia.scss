@@ -109,8 +109,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  opacity: 0.1;
+  opacity: 0.04;
   z-index: 0;
+  @include large {
+   opacity: 0.07;
+  }
 }
 
 .wikipedia__lines--one,
@@ -222,7 +225,7 @@
   margin: 10px 0 10px 0;
   @include large {
     width: 50vw;
-    margin:0;
+    margin: 0;
   }
 }
 
